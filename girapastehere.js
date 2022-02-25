@@ -21830,3 +21830,1536 @@ exports.heptatrap = (() => {
     ],
   };
 })();
+exports.shotgunanni = {
+  PARENT: [exports.genericTank],
+  DANGER: 7,
+  LABEL: "Shotgun Anni",
+  BODY: {
+    FOV: 1.5,
+  },
+  CONTROLLERS: [
+    "canRepel",
+    "onlyAcceptInArc",
+    "mapAltToFire",
+    "nearestDifferentMaster",
+  ],
+  GUNS: [
+    /***** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */ {
+      POSITION: [4, 3, 1, 11, -3, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun, g.anni, g.halfreload]),
+        TYPE: exports.bullet,
+      },
+    },
+    {
+      POSITION: [4, 3, 1, 11, 3, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun, g.anni, g.halfreload]),
+        TYPE: exports.bullet,
+      },
+    },
+    {
+      POSITION: [4, 4, 1, 13, 0, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun, g.anni, g.halfreload]),
+        TYPE: exports.casing,
+      },
+    },
+    {
+      POSITION: [1, 4, 1, 12, -1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun, g.anni, g.halfreload]),
+        TYPE: exports.casing,
+      },
+    },
+    {
+      POSITION: [1, 4, 1, 11, 1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun, g.anni, g.halfreload]),
+        TYPE: exports.casing,
+      },
+    },
+    {
+      POSITION: [1, 3, 1, 13, -1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun, g.anni, g.halfreload]),
+        TYPE: exports.bullet,
+      },
+    },
+    {
+      POSITION: [1, 3, 1, 13, 1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun, g.anni, g.halfreload]),
+        TYPE: exports.bullet,
+      },
+    },
+    {
+      POSITION: [1, 2, 1, 13, 2, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun, g.anni, g.halfreload]),
+        TYPE: exports.casing,
+      },
+    },
+    {
+      POSITION: [1, 2, 1, 13, -2, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun, g.anni, g.halfreload]),
+        TYPE: exports.casing,
+      },
+    },
+    {
+      POSITION: [15, 14, 1, 6, 0, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun, g.fake]),
+        TYPE: exports.casing,
+      },
+    },
+    {
+      POSITION: [8, 14, -1.3, 4, 0, 0, 0],
+    },
+  ],
+};
+exports.erupter = {
+  PARENT: [exports.genericTank],
+  DANGER: 7,
+  LABEL: "Erupter",
+  BODY: {
+    ACCELERATION: base.ACCEL * 0.7,
+  },
+  GUNS: [
+    /***** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */ {
+      POSITION: [4, 3, 1, 11, -3, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.bullet,
+      },
+    },
+    {
+      POSITION: [4, 3, 1, 11, 3, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.bullet,
+      },
+    },
+    {
+      POSITION: [4, 4, 1, 13, 0, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.casing,
+      },
+    },
+    {
+      POSITION: [1, 4, 1, 12, -1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.casing,
+      },
+    },
+    {
+      POSITION: [1, 4, 1, 11, 1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.casing,
+      },
+    },
+    {
+      POSITION: [1, 3, 1, 13, -1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.bullet,
+      },
+    },
+    {
+      POSITION: [1, 3, 1, 13, 1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.bullet,
+      },
+    },
+    {
+      POSITION: [1, 2, 1, 13, 2, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.casing,
+      },
+    },
+    {
+      POSITION: [1, 2, 1, 13, -2, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.casing,
+      },
+    },
+    {
+      POSITION: [15, 14, 1, 6, 0, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun, g.fake]),
+        TYPE: exports.casing,
+      },
+    },
+    {
+      POSITION: [8, 14, -1.3, 4, 0, 0, 0],
+    },
+    /***** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */ {
+      POSITION: [4, 3, 1, 11, -3, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.bullet,
+      },
+    },
+    {
+      POSITION: [4, 3, 1, 11, 3, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.bullet,
+      },
+    },
+    {
+      POSITION: [4, 4, 1, 13, 0, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.casing,
+      },
+    },
+    {
+      POSITION: [1, 4, 1, 12, -1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.casing,
+      },
+    },
+    {
+      POSITION: [1, 4, 1, 11, 1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.casing,
+      },
+    },
+    {
+      POSITION: [1, 3, 1, 13, -1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.bullet,
+      },
+    },
+    {
+      POSITION: [1, 3, 1, 13, 1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.bullet,
+      },
+    },
+    {
+      POSITION: [1, 2, 1, 13, 2, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.casing,
+      },
+    },
+    {
+      POSITION: [1, 2, 1, 13, -2, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.casing,
+      },
+    },
+    {
+      POSITION: [15, 14, 1, 6, 0, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun, g.fake]),
+        TYPE: exports.casing,
+      },
+    },
+    {
+      POSITION: [8, 14, -1.3, 4, 0, 0, 0],
+    },
+    {
+      POSITION: [8, 14, -1.4, 9, 0, 0, 0],
+    },
+  ],
+};
+
+exports.grenadeshotgun = {
+  PARENT: [exports.genericTank],
+  DANGER: 7,
+  LABEL: "Grenade Shotgun",
+  BODY: {
+    ACCELERATION: base.ACCEL * 0.7,
+  },
+  GUNS: [
+    /***** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */ {
+      POSITION: [4, 3, 1, 11, -3, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.grenade,
+      },
+    },
+    {
+      POSITION: [4, 3, 1, 11, 3, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.grenade,
+      },
+    },
+    {
+      POSITION: [4, 4, 1, 13, 0, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.grenade,
+      },
+    },
+    {
+      POSITION: [1, 4, 1, 12, -1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.grenade,
+      },
+    },
+    {
+      POSITION: [1, 4, 1, 11, 1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.grenade,
+      },
+    },
+    {
+      POSITION: [1, 3, 1, 13, -1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.grenade,
+      },
+    },
+    {
+      POSITION: [1, 3, 1, 13, 1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.grenade,
+      },
+    },
+    {
+      POSITION: [1, 2, 1, 13, 2, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.grenade,
+      },
+    },
+    {
+      POSITION: [1, 2, 1, 13, -2, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.grenade,
+      },
+    },
+    {
+      POSITION: [15, 14, 1, 6, 0, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun, g.fake]),
+        TYPE: exports.grenade,
+      },
+    },
+    {
+      POSITION: [8, 14, -1.3, 4, 0, 0, 0],
+    },
+  ],
+};exports.plaguestarter = {
+  PARENT: [exports.genericTank],
+  DANGER: 7,
+  LABEL: "Plague Starter",
+  SIZE: 30,
+  SHAPE: [[2,-0.5],[1,-2],[1,2],[2,0.5],[-2,0]
+         ],
+  BODY: {
+    ACCELERATION: base.ACCEL * 0.7,
+    FOV: base.FOV * 2.3,
+  },
+  GUNS: [
+    {
+      POSITION: [4, 3, 1, 11, -3, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [4, 3, 1, 11, 3, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [4, 4, 1, 13, 0, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [1, 4, 1, 12, -1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [1, 4, 1, 11, 1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [1, 3, 1, 13, -1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [1, 3, 1, 13, 1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [1, 2, 1, 13, 2, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [1, 2, 1, 13, -2, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [15, 14, 1, 6, 0, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun, g.fake]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [8, 14, -1.3, 4, 0, 0, 0],
+    },
+    {
+      POSITION: [4, 3, 1, 11, -3, 0, 0.3],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [4, 3, 1, 11, 3, 0, 0.3],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [4, 4, 1, 13, 0, 0, 0.3],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [1, 4, 1, 12, -1, 0, 0.3],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [1, 4, 1, 11, 1, 0, 0.3],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [1, 3, 1, 13, -1, 0, 0.3],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [1, 3, 1, 13, 1, 0, 0.3],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [1, 2, 1, 13, 2, 0, 0.3],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [1, 2, 1, 13, -2, 0, 0.3],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [15, 14, 1, 6, 0, 0, 0.3],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun, g.fake]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [8, 14, -1.3, 4, 0, 0, 0],
+    },
+    {
+      POSITION: [4, 3, 1, 11, -3, 0, 0.6],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [4, 3, 1, 11, 3, 0, 0.6],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [4, 4, 1, 13, 0, 0, 0.6],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [1, 4, 1, 12, -1, 0, 0.6],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [1, 4, 1, 11, 1, 0, 0.6],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [1, 3, 1, 13, -1, 0, 0.6],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [1, 3, 1, 13, 1, 0, 0.6],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [1, 2, 1, 13, 2, 0, 0.6],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [1, 2, 1, 13, -2, 0, 0.6],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [15, 14, 1, 6, 0, 0, 0.6],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun, g.fake]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [8, 14, -1.3, 4, 0, 0, 0],
+    },
+    /***** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */ {
+      POSITION: [4, 3, 1, 11, -3, 0, 0.3],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [4, 3, 1, 11, 3, 0, 0.3],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [4, 4, 1, 13, 0, 0, 0.3],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [1, 4, 1, 12, -1, 0, 0.3],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [1, 4, 1, 11, 1, 0, 0.3],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [1, 3, 1, 13, -1, 0, 0.3],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [1, 3, 1, 13, 1, 0, 0.3],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [1, 2, 1, 13, 2, 0, 0.3],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [1, 2, 1, 13, -2, 0, 0.3],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [15, 14, 1, 6, 0, 0, 0.3],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun, g.fake]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [8, 14, -1.3, 4, 0, 0, 0],
+    },
+    /***** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */ {
+      POSITION: [4, 3, 1, 11, -3, 0, 0.6],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [4, 3, 1, 11, 3, 0, 0.6],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [4, 4, 1, 13, 0, 0, 0.6],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [1, 4, 1, 12, -1, 0, 0.6],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [1, 4, 1, 11, 1, 0, 0.6],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [1, 3, 1, 13, -1, 0, 0.6],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [1, 3, 1, 13, 1, 0, 0.6],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [1, 2, 1, 13, 2, 0, 0.6],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [1, 2, 1, 13, -2, 0, 0.6],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [15, 14, 1, 6, 0, 0, 0.6],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun, g.fake]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [8, 14, -1.3, 4, 0, 0, 0],
+    },
+    /***** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */ {
+      POSITION: [4, 3, 1, 11, -3, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [4, 3, 1, 11, 3, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [4, 4, 1, 13, 0, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [1, 4, 1, 12, -1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [1, 4, 1, 11, 1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [1, 3, 1, 13, -1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [1, 3, 1, 13, 1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [1, 2, 1, 13, 2, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [1, 2, 1, 13, -2, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [15, 14, 1, 6, 0, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun, g.fake]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [8, 14, -1.3, 4, 0, 0, 0],
+    },
+    {
+      /*** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */
+      POSITION: [6, 20, 1.2, -8, 20, 180, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.drone, g.over]),
+        TYPE: exports.infectiondrone,
+        AUTOFIRE: true,
+        SYNCS_SKILLS: true,
+        STAT_CALCULATOR: gunCalcNames.drone,
+        WAIT_TO_CYCLE: true,
+        MAX_CHILDREN: 3,
+      },
+    },
+    {//have another go with it now
+      POSITION: [6, 20, 1.2, -8, -20, 180, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.drone, g.over]),
+        TYPE: exports.diseasedrone,
+        AUTOFIRE: true,
+        SYNCS_SKILLS: true,
+        STAT_CALCULATOR: gunCalcNames.drone,
+        WAIT_TO_CYCLE: true,
+        MAX_CHILDREN: 3,
+      }, 
+    },
+  ],
+};
+exports.disease = {
+  PARENT: [exports.genericTank],
+  DANGER: 7,
+  SHAPE: [[-1,-1],[1,-1.5],[1,1.5],[-1,1],[-1.5,0]
+         ],
+  LABEL: "Disease",
+  BODY: {
+    ACCELERATION: base.ACCEL * 0.7,
+  },
+  GUNS: [
+    /***** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */ 
+    {
+      POSITION: [4, 3, 1, 11, -3, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [4, 3, 1, 11, 3, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [4, 4, 1, 13, 0, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [1, 4, 1, 12, -1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [1, 4, 1, 11, 1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [1, 3, 1, 13, -1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [1, 3, 1, 13, 1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [1, 2, 1, 13, 2, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [1, 2, 1, 13, -2, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [15, 14, 1, 6, 0, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun, g.fake]),
+        TYPE: exports.quadbullet,
+      },
+    },
+    {
+      POSITION: [8, 14, -1.3, 4, 0, 0, 0],
+    },
+    {
+      POSITION: [13, 8, 1, 0, -1, 135, 0.6],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([
+          g.basic,
+          g.flank,
+          g.tri,
+          g.thruster,
+          g.halfrecoil,
+        ]),
+        TYPE: exports.bullet,
+        LABEL: gunCalcNames.thruster,
+      },
+    },
+    {
+      POSITION: [13, 8, 1, 0, 1, 225, 0.6],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([
+          g.basic,
+          g.flank,
+          g.tri,
+          g.thruster,
+          g.halfrecoil,
+        ]),
+        TYPE: exports.bullet,
+        LABEL: gunCalcNames.thruster,
+      },
+    },
+    {
+      POSITION: [16, 8, 1, 0, 0, 145, 0.1],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.flank, g.tri, g.thruster]),
+        TYPE: exports.bullet,
+        LABEL: gunCalcNames.thruster,
+      },
+    },
+    {
+      POSITION: [16, 8, 1, 0, 0, 215, 0.1],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.flank, g.tri, g.thruster]),
+        TYPE: exports.bullet,
+        LABEL: gunCalcNames.thruster,
+      },
+    },
+  ],
+};
+exports.infection = {
+  PARENT: [exports.genericTank],
+  DANGER: 7,
+  SHAPE: [[0,-0.5],[1,-1.5],[1,1.5],[0,0.5],[-3,0]
+         ],
+  LABEL: "Infection",
+  BODY: {
+    ACCELERATION: base.ACCEL * 0.7,
+  },
+  GUNS: [
+    /***** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */ {
+      POSITION: [4, 3, 1, 11, -3, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [4, 3, 1, 11, 3, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [4, 4, 1, 13, 0, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [1, 4, 1, 12, -1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [1, 4, 1, 11, 1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [1, 3, 1, 13, -1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [1, 3, 1, 13, 1, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [1, 2, 1, 13, 2, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [1, 2, 1, 13, -2, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [15, 14, 1, 6, 0, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.mach, g.shotgun, g.fake]),
+        TYPE: exports.quadtrapbullet,
+      },
+    },
+    {
+      POSITION: [8, 14, -1.3, 4, 0, 0, 0],
+    },
+    {
+      POSITION: [13, 8, 1, 0, -1, 135, 0.6],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([
+          g.basic,
+          g.flank,
+          g.tri,
+          g.thruster,
+          g.halfrecoil,
+        ]),
+        TYPE: exports.bullet,
+        LABEL: gunCalcNames.thruster,
+      },
+    },
+    {
+      POSITION: [13, 8, 1, 0, 1, 225, 0.6],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([
+          g.basic,
+          g.flank,
+          g.tri,
+          g.thruster,
+          g.halfrecoil,
+        ]),
+        TYPE: exports.bullet,
+        LABEL: gunCalcNames.thruster,
+      },
+    },
+    {
+      POSITION: [16, 8, 1, 0, 0, 145, 0.1],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.flank, g.tri, g.thruster]),
+        TYPE: exports.bullet,
+        LABEL: gunCalcNames.thruster,
+      },
+    },
+    {
+      POSITION: [16, 8, 1, 0, 0, 215, 0.1],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.flank, g.tri, g.thruster]),
+        TYPE: exports.bullet,
+        LABEL: gunCalcNames.thruster,
+      },
+    },
+  ],
+};
+
+exports.builder = {
+  PARENT: [exports.genericTank],
+  DANGER: 6,
+  LABEL: "Builder",
+  STAT_NAMES: statnames.trap,
+  BODY: {
+    SPEED: base.SPEED * 0.8,
+    FOV: base.FOV * 1.15,
+  },
+  MAX_CHILDREN: 4,
+  GUNS: [
+    {
+      /*** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */
+      POSITION: [18, 12, 1, 0, 0, 0, 0],
+    },
+    {
+      POSITION: [2, 12, 1.1, 18, 0, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.trap, g.block]),
+        TYPE: exports.block,
+      },
+    },
+  ],
+};
+
+exports.trapper = {
+  PARENT: [exports.genericTank],
+  DANGER: 6,
+  LABEL: "Trapper",
+  STAT_NAMES: statnames.trap,
+  BODY: {
+    SPEED: base.SPEED * 0.8,
+    FOV: base.FOV * 1.15,
+  },
+  MAX_CHILDREN: 7,
+  GUNS: [
+    {
+      /*** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */
+      POSITION: [18, 7, 1, 0, 0, 0, 0],
+    },
+    {
+      POSITION: [4, 7, 1.1, 18, 0, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.trap, g.block]),
+        TYPE: exports.trap,
+      },
+    },
+  ],
+};
+exports.tracker = {
+  PARENT: [exports.genericTank],
+  DANGER: 6,
+  LABEL: "Tracker",
+  STAT_NAMES: statnames.trap,
+  BODY: {
+    SPEED: base.SPEED * 0.8,
+    FOV: base.FOV * 1.15,
+  },
+  MAX_CHILDREN: 4,
+  GUNS: [
+    {
+      /*** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */
+      POSITION: [18, 12, 1, 0, 0, 0, 0],
+    },
+    {
+      POSITION: [2, 12, 1.1, 18, 0, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.trap, g.block]),
+        TYPE: exports.trapblock,
+      },
+    },
+  ],
+};
+exports.engineer = {
+  PARENT: [exports.genericTank],
+  DANGER: 7,
+  LABEL: "Engineer",
+  STAT_NAMES: statnames.trap,
+  BODY: {
+    SPEED: base.SPEED * 0.75,
+    FOV: base.FOV * 1.15,
+  },
+  GUNS: [
+    {
+      /*** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */
+      POSITION: [5, 11, 1, 10.5, 0, 0, 0],
+    },
+    {
+      POSITION: [3, 14, 1, 15.5, 0, 0, 0],
+    },
+    {
+      POSITION: [2, 14, 1.3, 18, 0, 0, 0],
+      PROPERTIES: {
+        MAX_CHILDREN: 6,
+        SHOOT_SETTINGS: combineStats([g.trap, g.block]),
+        TYPE: exports.pillbox,
+        SYNCS_SKILLS: true,
+      },
+    },
+    {
+      POSITION: [4, 14, 1, 8, 0, 0, 0],
+    },
+  ],
+};
+
+exports.programmer = {
+  PARENT: [exports.genericTank],
+  DANGER: 7,
+  LABEL: "Programmer",
+  STAT_NAMES: statnames.trap,
+  BODY: {
+    SPEED: base.SPEED * 0.75,
+    FOV: base.FOV * 1.15,
+  },
+  GUNS: [
+    {
+      /*** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */
+      POSITION: [5, 20, 1, 10.5, 0, 0, 0],
+    },
+    {
+      POSITION: [3, 23, 1, 15.5, 0, 0, 0],
+    },
+    {
+      POSITION: [2, 23, 1.3, 18, 0, 0, 1.2],
+      PROPERTIES: {
+        MAX_CHILDREN: 5,
+        SHOOT_SETTINGS: combineStats([g.trap, g.block]),
+        TYPE: exports.programbox,
+        SYNCS_SKILLS: true,
+      },
+    },
+    {
+      POSITION: [4, 23, 1, 8, 0, 0, 0],
+    },
+    {
+      /*** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */
+      POSITION: [5, 11, 1, 10.5, 0, 180, 0],
+    },
+    {
+      POSITION: [3, 14, 1, 15.5, 0, 180, 0],
+    },
+    {
+      POSITION: [2, 14, 1.3, 18, 0, 180, 0],
+      PROPERTIES: {
+        MAX_CHILDREN: 8,
+        SHOOT_SETTINGS: combineStats([g.trap, g.block]),
+        TYPE: exports.pillbox4,
+        SYNCS_SKILLS: true,
+      },
+    },
+    {
+      POSITION: [4, 14, 1, 8, 0, 0, 0],
+    },
+    {
+      POSITION: [7, 7.5, 0.6, 7, -1, 90, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.swarm]),
+        TYPE: [exports.bee],
+        STAT_CALCULATOR: gunCalcNames.swarm,
+      },
+    },{
+      POSITION: [7, 7.5, 0.6, 7, -1, -90, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.swarm]),
+        TYPE: [exports.bee],
+        STAT_CALCULATOR: gunCalcNames.swarm,
+      },
+    },
+  ],
+};
+exports.bulkzarkconstruct = {
+  PARENT: [exports.genericTank],
+  LABEL: "Mini Twin Shooter",
+  BODY: {
+    FOV: 2,
+    DAMAGE: base.DAMAGE * 0.06
+  },
+  CONTROLLERS: [
+    "canRepel",
+    "onlyAcceptInArc",
+    "mapAltToFire",
+    "nearestDifferentMaster",
+  ],
+  COLOR: 16,
+  GUNS: [
+    {
+      /*** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */
+      POSITION: [27, 12, 1, 0, 0, 0, 0],
+    },
+    {
+      POSITION: [2, 12, 1.2, 27, 0, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.trap, g.block, g.construct, g.norecoil]),
+        TYPE: exports.block,
+      },
+    },
+   {
+      /*** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */
+      POSITION: [23, 15, 1, 0, 0, 0, 0],
+    },
+    {
+      POSITION: [2, 15, 1.2, 23, 0, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.trap, g.block, g.construct, g.norecoil]),
+        TYPE: exports.block,
+      },
+    },
+    {
+      /*** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */
+      POSITION: [18, 18, 1, 0, 0, 0, 0],
+    },
+    {
+      POSITION: [2, 18, 1.2, 18, 0, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.trap, g.block, g.construct, g.norecoil]),
+        TYPE: exports.block,
+      },
+    },
+  ],
+};
+exports.construct = {
+  PARENT: [exports.genericTank],
+  LABEL: "Mega Trapper",
+   CONTROLLERS: ["nearestDifferentMaster"],
+  STAT_NAMES: statnames.trap,
+  DANGER: 7,
+  BODY: {
+    ACCELERATION: base.ACCEL * 0.5,
+    SPEED: base.SPEED * 0.7,
+    FOV: base.FOV * 1.15,
+  },
+  GUNS: [
+    {
+      /*** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */
+      POSITION: [18, 18, 1, 0, 0, 0, 0],
+    },
+    {
+      POSITION: [2, 18, 1.2, 18, 0, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.trap, g.block, g.construct]),
+        TYPE: exports.block,
+      },
+    },
+  ],
+};
+exports.overpass = {
+  PARENT: [exports.genericTank],
+  LABEL: "Overpass",
+   CONTROLLERS: ["nearestDifferentMaster"],
+  STAT_NAMES: statnames.trap,
+  DANGER: 7,
+  BODY: {
+    ACCELERATION: base.ACCEL * 0.5,
+    SPEED: base.SPEED * 0.7,
+    FOV: base.FOV * 1.15,
+  },
+  GUNS: [
+    {
+      /* LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */
+      POSITION: [20, 8, 1, 0, 0, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic]),
+        TYPE: exports.bullet,
+      },
+    },
+    {
+      /*** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */
+      POSITION: [18, 30, 1.4, 0, 0, 0, 0],
+    },
+    {
+      POSITION: [2, 30, 1.2, 18, 0, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.trap, g.block, g.construct]),
+        TYPE: exports.block,
+        MAX_CHILDREN: 4,
+      },
+    },
+  ],
+};
+exports.autobuilder = makeAuto(exports.builder);
+exports.conq = {
+  PARENT: [exports.genericTank],
+  DANGER: 7,
+  LABEL: "",
+  STAT_NAMES: statnames.trap,
+  BODY: {
+    SPEED: base.SPEED * 0.8,
+  },
+  GUNS: [
+    {
+      /*** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */
+      POSITION: [21, 14, 1, 0, 0, 180, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.pound]),
+        TYPE: exports.bullet,
+      },
+    },
+    {
+      POSITION: [18, 14, 1, 0, 0, 0, 0],
+    },
+    {
+      POSITION: [2, 14, 1.1, 18, 0, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.trap, g.block]),
+        TYPE: exports.block,
+      },
+    },
+  ],
+};
+exports.bentboomer = {
+  PARENT: [exports.genericTank],
+  DANGER: 7,
+  LABEL: "Boomer",
+  STAT_NAMES: statnames.trap,
+  BODY: {
+    SPEED: base.SPEED * 0.8,
+    FOV: base.FOV * 1.15,
+  },
+  GUNS: [
+    {
+      /*** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */
+      POSITION: [8, 10, 1, 8, -2, -35, 0],
+    },
+    {
+      POSITION: [8, 10, 1, 8, 2, 35, 0],
+    },
+    {
+      POSITION: [2, 10, 1.3, 16, -2, -35, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.trap, g.block, g.fast, g.twin]),
+        TYPE: exports.boomerang,
+      },
+    },
+    {
+      POSITION: [2, 10, 1.3, 16, 2, 35, 0.5],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.trap, g.block, g.fast, g.twin]),
+        TYPE: exports.boomerang,
+      },
+    },
+  ],
+};
+exports.janitor = {
+  PARENT: [exports.genericTank],
+  DANGER: 7,
+  LABEL: "Janitor",
+  STAT_NAMES: statnames.trap,
+  BODY: {
+    SPEED: base.SPEED * 3,
+    FOV: base.FOV * 1.15,
+    MAX_CHILDREN: 30,
+  },
+  GUNS: [
+    {
+      /*** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */
+      POSITION: [8, 10, 1, 8, -2, -35, 0],
+    },
+    {
+      POSITION: [8, 10, 1, 8, 2, 35, 0],
+    },
+    {
+      POSITION: [2, 10, 1.3, 16, -2, -35, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.trap, g.block, g.fast, g.twin]),
+        TYPE: exports.boomerang,
+      },
+    },
+    {
+      POSITION: [2, 10, 1.3, 16, 2, 35, 0.5],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.trap, g.block, g.fast, g.twin]),
+        TYPE: exports.boomerang,
+      },
+    },
+    {
+      /*** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */
+      POSITION: [8, 10, 1, 8, -2, -15, 0],
+    },
+    {
+      POSITION: [8, 10, 1, 8, 2, 15, 0],
+    },
+    {
+      POSITION: [2, 10, 1.3, 16, -2, -15, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.trap, g.block, g.fast, g.twin]),
+        TYPE: exports.boomerang,
+      },
+    },
+    {
+      POSITION: [2, 10, 1.3, 16, 2, 15, 0.5],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.trap, g.block, g.fast, g.twin]),
+        TYPE: exports.boomerang,
+      },
+    },
+    {
+      /*** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */
+      POSITION: [8, 10, 1, 8, -2, -55, 0],
+    },
+    {
+      POSITION: [8, 10, 1, 8, 2, 55, 0],
+    },
+    {
+      POSITION: [2, 10, 1.3, 16, -2, -55, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.trap, g.block, g.fast, g.twin]),
+        TYPE: exports.boomerang,
+      },
+    },
+    {
+      POSITION: [2, 10, 1.3, 16, 2, 55, 0.5],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.trap, g.block, g.fast, g.twin]),
+        TYPE: exports.boomerang,
+      },
+    },
+    {
+      /*** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */
+      POSITION: [8, 10, 1, 8, -2, -75, 0],
+    },
+    {
+      POSITION: [8, 10, 1, 8, 2, 75, 0],
+    },
+    {
+      POSITION: [20, 15, 1, 8, 0, 0, 0],
+    },
+    {
+      POSITION: [2, 10, 1.3, 16, -2, -75, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.trap, g.block, g.fast, g.twin]),
+        TYPE: exports.boomerang,
+      },
+    },
+    {
+      POSITION: [2, 10, 1.3, 16, 2, 75, 0.5],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.trap, g.block, g.fast, g.twin]),
+        TYPE: exports.boomerang,
+      },
+    },
+    {
+      POSITION: [14, 15, 1.3, 16, 0, 0, 0.5],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.trap, g.block, g.fast, g.twin]),
+        TYPE: exports.boomerang,
+      },
+    },
+    {
+      /*** LENGTH  WIDTH   ASPECT    X       Y     ANGLE   DELAY */
+      POSITION: [5, 20, 1, 14, 0, 180, 0],
+    },
+    {
+      POSITION: [6, 20, -1.5, 7, 0, 180, 0],
+    },
+    {
+      //POSITION: [  12,    15,      1,      0,      0,      0,      0,   ],
+      //    }, {
+      POSITION: [2, 20, 1.3, 18, 0, 180, 5],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.trap, g.block, g.boomerang]),
+        TYPE: exports.boomerang,
+      },
+    },
+  ],
+};
