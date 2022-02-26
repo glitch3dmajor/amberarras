@@ -4622,9 +4622,9 @@ var maintainloop = (() => {
         let bots = [];
         return () => {
             let census = {
-                crasher: 0,
-                miniboss: 0,
-                tank: 0,
+                crasher: 15,
+                miniboss: 5,
+                tank: 15,
             };    
             let npcs = entities.map(function npcCensus(instance) {
                 if (census[instance.type] != null) {
