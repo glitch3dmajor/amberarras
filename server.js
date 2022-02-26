@@ -4671,6 +4671,12 @@ var maintainloop = (() => {
                 case 3: a = Class.pentagon; break;
                 case 4: a = Class.bigPentagon; break;
                 case 5: a = Class.hugePentagon; break;
+                case 6: a = Class.octogon; break;
+                case 7: a = Class.octogonguardian; break;
+                case 8: a = Class.squareguardian; break;
+                case 9: a = Class.triangleguardian; break;
+                case 10: a = Class.pentagonguardian; break;
+                case 11: a = Class.eggguardian; break;
                 default: throw('bad food level');
             }
             if (a !== {}) {
@@ -4793,6 +4799,11 @@ var maintainloop = (() => {
                 [4]: 0, // Beta
                 [5]: 0, // Alpha
                 [6]: 0,
+              [7]: 0,
+              [8]: 0,
+               [9]: 0,
+               [10]: 0,
+               [11]: 0,
                 tank: 0,
                 sum: 0,
             };
