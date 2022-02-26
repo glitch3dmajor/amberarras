@@ -1,5 +1,5 @@
 /*jslint node: true */
-/*jshint -W061 */
+/*jshint -W061 */ 
 /*global goog, Map, let */
 "use strict";
 
@@ -4600,13 +4600,13 @@ var maintainloop = (() => {
         if (ran.chance(1 -  0.5 * census.crasher / room.maxFood / room.nestFoodAmount)) {
             let spot, i = 30;
             do { spot = room.randomType('nest'); i--; if (!i) return 0; } while (dirtyCheck(spot, 100));
-            let type = (ran.dice(80)) ? ran.chioose([Class.sentryGun, Class.sentrySwarm, Class.sentryTrap]) : Class.crasher;
+            let type = (ran.dice(80)) ? ran.choose([Class.sentryGun, Class.sentrySwarm, Class.sentryTrap]) : Class.crasher;
             let o = new Entity(spot);
                 o.define(type);
                 o.team = -100;
         }
-    };
-    // The NPC function
+    }; //im gonna have to go hunt another peice of code now, brb
+    // The NPC function 
     let makenpcs = (() => {
         // Make base protectors if needed.
             /*let f = (loc, team) => { 
