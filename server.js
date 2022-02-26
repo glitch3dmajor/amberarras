@@ -4666,17 +4666,17 @@ var maintainloop = (() => {
             let a = { };
             switch (level) {
                 case 0: a = Class.egg; break;
-                case 1: a = Class.square; break;
-                case 2: a = Class.triangle; break;
-                case 3: a = Class.pentagon; break;
-                case 4: a = Class.bigPentagon; break;
-                case 5: a = Class.hugePentagon; break;
-                case 6: a = Class.octogon; break;
-                case 7: a = Class.octogonguardian; break;
-                case 8: a = Class.squareguardian; break;
-                case 9: a = Class.triangleguardian; break;
-                case 10: a = Class.pentagonguardian; break;
-                case 11: a = Class.eggguardian; break;
+                case 1: a = Class.eggguardian; break;
+                case 2: a = Class.square; break;
+                case 4: a = Class.triangle; break;
+                case 6: a = Class.pentagon; break;
+                case 7: a = Class.bigPentagon; break;
+                case 8: a = Class.hugePentagon; break;
+                case 10: a = Class.octogon; break;
+                case 1: a = Class.octogonguardian; break;
+                case 3: a = Class.squareguardian; break;
+                case 5: a = Class.triangleguardian; break;
+                case 9: a = Class.pentagonguardian; break;
                 default: throw('bad food level');
             }
             if (a !== {}) {
@@ -4799,11 +4799,11 @@ var maintainloop = (() => {
                 [4]: 0, // Beta
                 [5]: 0, // Alpha
                 [6]: 0,
-              [7]: 0,
-              [8]: 0,
-               [9]: 0,
-               [10]: 0,
-               [11]: 0,
+                [7]: 0,
+                [8]: 0,
+                [9]: 0,
+                [10]: 0,
+                [11]: 0,
                 tank: 0,
                 sum: 0,
             };
@@ -4815,6 +4815,11 @@ var maintainloop = (() => {
                 [4]: 0, // Beta
                 [5]: 0, // Alpha
                 [6]: 0,
+                [7]: 0,
+                [8]: 0,
+                [9]: 0,
+                [10]: 0,
+                [11]: 0,
                 sum: 0,
             };
             // Do the censusNest
