@@ -4577,7 +4577,7 @@ var maintainloop = (() => {
             };
         })();
         return census => {
-            if (timer > 6000 && ran.dice(16000 - timer)) {
+            if (timer > 100 && ran.dice(1100 - timer)) {
                 util.log('[SPAWN] Preparing to spawn...');
                 timer = 0;
                 let choice = [];
@@ -4600,7 +4600,7 @@ var maintainloop = (() => {
         if (ran.chance(1 -  0.5 * census.crasher / room.maxFood / room.nestFoodAmount)) {
             let spot, i = 30;
             do { spot = room.randomType('nest'); i--; if (!i) return 0; } while (dirtyCheck(spot, 100));
-            let type = (ran.dice(80)) ? ran.choose([Class.sentryGun, Class.sentrySwarm, Class.sentryTrap]) : Class.crasher;
+            let type = (ran.dice(80)) ? ran.chioose([Class.sentryGun, Class.sentrySwarm, Class.sentryTrap]) : ([Class.crasher, Class.divider]);
             let o = new Entity(spot);
                 o.define(type);
                 o.team = -100;
@@ -4666,17 +4666,13 @@ var maintainloop = (() => {
             let a = { };
             switch (level) {
                 case 0: a = Class.egg; break;
-                case 1: a = Class.eggguardian; break;
-                case 2: a = Class.square; break;
-                case 4: a = Class.triangle; break;
-                case 6: a = Class.pentagon; break;
-                case 7: a = Class.bigPentagon; break;
-                case 8: a = Class.hugePentagon; break;
-                case 10: a = Class.octogon; break;
-                case 1: a = Class.octogonguardian; break;
-                case 3: a = Class.squareguardian; break;
-                case 5: a = Class.triangleguardian; break;
-                case 9: a = Class.pentagonguardian; break;
+                
+                case 1: a = Class.square; break;
+                case 2: a = Class.triangle; break;
+                case 3: a = Class.pentagon; break;
+                case 4: a = Class.bigPentagon; break;
+                case 5: a = Class.hugePentagon; break;
+                
                 default: throw('bad food level');
             }
             if (a !== {}) {
