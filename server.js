@@ -4606,8 +4606,7 @@ var maintainloop = (() => {
                 o.define(type);
                 o.team = -100;
         }
-    }; //im gonna have to go hunt another peice of code now, brb
-    // The NPC function 
+    }; 
     let makenpcs = (() => {
         // Make base protectors if needed.
             let f = (loc, team) => { 
@@ -4619,6 +4618,22 @@ var maintainloop = (() => {
             for (let i=1; i<5; i++) {
                 room['bas' + i].forEach((loc) => { f(loc, i); }); 
             }
+       let f2 = (loc, team) => {
+      let o = new Entity(loc);
+      o.define(Class.dominatordestroy);
+      o.team = -2;
+      o.name = "Destroyer Dominator"
+      o.color = 2;
+      /* o.ondeath = () => {
+            process.exit()
+            sockets.broadcast("If you made so for gg!")
+         } */
+    }
+     for (let i = 1; i < 5; i++) {
+      room["bap" + i].forEach((loc) => {
+        f2(loc, i);
+      });
+    };
         // Return the spawning function
         let bots = [];
         return () => {

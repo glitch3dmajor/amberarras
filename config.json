@@ -20,10 +20,10 @@
     [ "bas1", "bas1", "norm", "norm", "norm", "norm", "norm", "norm", "bas2", "bas2" ],
     [ "bas1", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "bas2" ],
     [ "norm", "norm", "norm", "norm", "nest", "nest", "norm", "norm", "norm", "norm" ],
-    [ "norm", "norm", "norm", "nest", "roid", "dom1", "nest", "norm", "norm", "norm" ],
+    [ "norm", "norm", "norm", "nest", "roid", "bap", "nest", "norm", "norm", "norm" ],
     [ "norm", "norm", "norm", "nest", "nest", "nest", "nest", "norm", "norm", "norm" ],
     [ "norm", "norm", "norm", "nest", "nest", "nest", "nest", "norm", "norm", "norm" ],
-    [ "norm", "norm", "norm", "nest", "rock", "roid", "nest", "norm", "norm", "norm" ],
+    [ "norm", "norm", "norm", "nest", "bap", "roid", "nest", "norm", "norm", "norm" ],
     [ "norm", "norm", "norm", "norm", "nest", "nest", "norm", "norm", "norm", "norm" ],
     [ "bas3", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "bas4" ],
     [ "bas3", "bas3", "norm", "norm", "norm", "norm", "norm", "norm", "bas4", "bas4" ]
