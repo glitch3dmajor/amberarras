@@ -2,12 +2,12 @@ Welcome To Chores, otherwise known as a to do list.
 -Add Notes Here to remember what to do in the future
 -When you're free and you don't know what to do, you can come back here and look
  
-  exports.anniturreter,
   exports.tripleturreter,
   exports.pentaturreter,
   exports.sprayturreter,
   exports.skimturreter,
-  exports.triturreter,
+  exports.hexturreter,
+  exports.octoturreter,
   exports.bentturreter,
   exports.trapperturreter,
   exports.builderturreter,
