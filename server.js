@@ -103,17 +103,18 @@ const room = {
               }
             }
           }*/
-          if (room.prim)
+        if (room.prim)
             for (let loc of room.prim) {
               let o = new Entity(loc);
               o.define(Class.dominatordestroy);
               o.team = -1;
-              o.color = 10;
+              o.color = 3;
               o.name = "Dominator"
               o.ondeath = () => {
                    process.exit()
               }
             }
+
     room.randomType = type => {
         let selection = room[type][ran.irandom(room[type].length-1)];
         return {
