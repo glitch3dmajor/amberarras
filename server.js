@@ -4536,8 +4536,8 @@ var maintainloop = (() => {
                 names = [],
                 bois = [Class.egg],
                 n = 0,
-                begin = 'yo some shit is about to move to a lower position',
-                arrival = 'Something happened lol u should probably let Neph know this broke',
+                begin = 'The Earth Trembles...',
+                arrival = 'It Appears...',
                 loc = 'norm';
             let spawn = () => {
                 let spot, m = 0;
