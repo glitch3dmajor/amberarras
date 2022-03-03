@@ -23,7 +23,7 @@
     [ "norm", "norm", "norm", "nest", "roid", "dom1", "nest", "norm", "norm", "norm" ],
     [ "norm", "norm", "norm", "nest", "nest", "nest", "nest", "norm", "norm", "norm" ],
     [ "norm", "norm", "norm", "nest", "nest", "nest", "nest", "norm", "norm", "norm" ],
-    [ "norm", "norm", "norm", "nest", "dom1", "roid", "nest", "norm", "norm", "norm" ],
+    [ "norm", "norm", "norm", "nest", "dom2", "roid", "nest", "norm", "norm", "norm" ],
     [ "norm", "norm", "norm", "norm", "nest", "nest", "norm", "norm", "norm", "norm" ],
     [ "bas3", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "bas4" ],
     [ "bas3", "bas3", "norm", "norm", "norm", "norm", "norm", "norm", "bas4", "bas4" ]
