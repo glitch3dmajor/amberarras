@@ -73,14 +73,10 @@ const room = {
     room.findType('bas4');
     room.findType('roid');
     room.findType('rock');
-    room.findType('dom1');
-    room.findType('dom2');
-    room.findType('dom3'); 
-    room.findType('dom4');
-room.findType('bap1');
-room.findType('bap2');
-room.findType('bap3');
-room.findType('bap4');
+    room.findType('dom6');
+    room.findType('dom7');
+    room.findType('dom8'); 
+    room.findType('dom9');
     room.findType('prim');
     room.nestFoodAmount = 1.5 * Math.sqrt(room.nest.length) / room.xgrid / room.ygrid;
     room.random = () => {
@@ -4635,12 +4631,12 @@ var maintainloop = (() => {
             }
       let k = (loc, team) => { 
                 let k = new Entity(loc);
-                    k.define(Class.dominatordestroy);
+                    k.define(Class.dominatorswarm);
                     k.team = -team;
                     k.color = [3][team-1];
             };
       for (let i=1; i<5; i++) {
-                room['bap' + i].forEach((loc) => { f(loc, i); }); 
+                room['dom' + i].forEach((loc) => { f(loc, i); }); 
             }
         // Return the spawning function
         let bots = [];
