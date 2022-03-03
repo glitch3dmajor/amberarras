@@ -85,35 +85,8 @@ const room = {
             y: ran.irandom(room.height),
         };
     };
-  /*if (room.nest)
-            for (let loc of room.nest) {
-              let o = new Entity(loc)
-              o.define(ran.choose([Class.pentadecagon, Class.dodecagon, Class.decagon, Class.gem, Class.hexagon]))
-              o.team = -100
-              o.ondeath = () => {
-                 let e = new Entity(loc)
-                 e.define(ran.choose([Class.pentadecagon, Class.dodecagon, Class.decagon, Class.gem, Class.hexagon]))
-                 e.team = -100
-                 e.ondeath = () => {
-                    let g = new Entity(loc)
-                    g.define(ran.choose([Class.pentadecagon, Class.dodecagon, Class.decagon, Class.gem, Class.hexagon]))
-                    g.team = -100
-                   o.ondeath = g.ondeath
-                   g = o
-              }
-            }
-          }*/
-        if (room.prim)
-            for (let loc of room.prim) {
-              let o = new Entity(loc);
-              o.define(Class.dominatordestroy);
-              o.team = -1;
-              o.color = 3;
-              o.name = "Dominator"
-              o.ondeath = () => {
-                   process.exit()
-              }
-            }
+            
+          
 
     room.randomType = type => {
         let selection = room[type][ran.irandom(room[type].length-1)];
