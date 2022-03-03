@@ -4629,7 +4629,15 @@ var maintainloop = (() => {
             for (let i=1; i<5; i++) {
                 room['bas' + i].forEach((loc) => { f(loc, i); }); 
             }
-      
+      let k = (loc, team) => { 
+                let k = new Entity(loc);
+                    k.define(Class.dominatordestroy);
+                    k.team = -team;
+                    k.color = [10, 11, 12, 15][team-1];
+            };
+      for (let i=1; i<5; i++) {
+                room['dom' + i].forEach((loc) => { f(loc, i); }); 
+            }
         // Return the spawning function
         let bots = [];
         return () => {
