@@ -78,8 +78,6 @@ const room = {
     room.findType('dom3'); 
     room.findType('dom4');
     room.findType('prim');
-    room.findType('acSP');
-    room.findType('ATMG');
     room.nestFoodAmount = 1.5 * Math.sqrt(room.nest.length) / room.xgrid / room.ygrid;
     room.random = () => {
         return {
@@ -5003,3 +5001,7 @@ let websockets = (() => {
     return new WebSocket.Server(config)
 })().on('connection', sockets.connect); 
 
+// Bring it to life
+setInterval(gameloop, room.cycleSpeed);
+setInterval(maintainloop, 200);
+setInterval(speedcheckloop, 1000);
