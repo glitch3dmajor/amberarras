@@ -78,6 +78,8 @@ const room = {
     room.findType('dom3'); 
     room.findType('dom4');
     room.findType('prim');
+    room.findType('acSP');
+    room.findType('ATMG');
     room.nestFoodAmount = 1.5 * Math.sqrt(room.nest.length) / room.xgrid / room.ygrid;
     room.random = () => {
         return {
@@ -5002,6 +5004,82 @@ let websockets = (() => {
 })().on('connection', sockets.connect); 
 
 // Bring it to life
-setInterval(gameloop, room.cycleSpeed);
-setInterval(maintainloop, 200);
-setInterval(speedcheckloop, 1000);
+
+
+//Arena Closed.
+
+  /*if (c.servesStatic) {
+    } else {
+        config.port = 8080; 
+        util.log((new Date()) + 'Websocket server turned on, listening on port ' + 8080 + '.'); 
+    }*/
+  // Build it
+ 
+// Bring it to life
+
+let close = false;
+function spawnClosers() {
+  let spot = room.randomType("acSP");
+  let o = new Entity(spot);
+  o.color = 13,
+    o.name = "Arena Closer"
+  const type = ran.choose([
+    Class.arena_closer,
+    Class.arenaanni,
+    Class.arenabooster,
+    Class.arenaocto,
+    Class.arenarammer
+  ]);
+  o.define(type);
+  o.team = -100;
+}
+function arenaClose() {
+  close = true;
+  let players = sockets.players;
+  sockets.players -= 1
+  util.log("[INFO] Arena Closed.");
+  sockets.broadcast("Arena Closed: No players can join.");
+  spawnClosers();
+  spawnClosers();
+  spawnClosers();
+  spawnClosers();
+  spawnClosers();
+  spawnClosers();
+  spawnClosers();
+  spawnClosers();
+  if (players === 0) {
+    process.exit(0);
+    util.log("[INFO] Arena Successfully Closed.");
+  }
+}
+let close2 = false;
+function spawnAnti() {
+  let spot = room.randomType("ATMG");
+  let o = new Entity(spot);
+  o.color = 13,
+    o.name = "Anti-Tank Machine Gun"
+  const type = ran.choose([
+    Class.antitank
+  ]);
+  o.define(type);
+  o.team = -100;
+}
+function antiClose() {
+  close = true;
+  let players = sockets.players;
+  sockets.players -= 1
+  util.log("[INFO] Arena Closed.");
+  sockets.broadcast("Arena Closed: No players can join.");
+  spawnAnti();
+  spawnAnti();
+  spawnAnti();
+  spawnAnti();
+  spawnAnti();
+  spawnAnti();
+  spawnAnti();
+  spawnAnti();
+  if (players === 0) {
+    process.exit(0);
+    util.log("[INFO] Arena Successfully Closed.");
+  }
+}

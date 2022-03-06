@@ -17,17 +17,17 @@
   "RANDOM_COLORS": false,
   "BANNED_CHARACTER_REGEX": "/[\uFDFD\u200E\u0000]/gi", 
   "ROOM_SETUP": [
-    [ "bas2", "bas2", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "bas2", "bas2" ],
+    [ "bas2", "bas2", "norm", "ATMG", "norm", "norm", "norm", "ATMG", "norm", "bas2", "bas2" ],
     [ "bas2", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "bas2" ],
     [ "nest", "norm", "norm", "roid", "nest", "nest", "nest", "roid", "norm", "norm", "nest" ],
-    [ "nest", "norm", "norm", "nest", "dom3", "dom3", "dom3", "nest", "norm", "norm", "nest" ],
-    [ "nest", "norm", "norm", "dom3", "nest", "norm", "nest", "nest", "norm", "norm", "nest" ],
-    [ "nest", "norm", "norm", "dom3", "nest", "nest", "dom3", "dom3", "norm", "norm", "nest" ],
-    [ "nest", "norm", "norm", "dom3", "nest", "norm", "nest", "dom3", "norm", "norm", "nest" ],
+    [ "nest", "norm", "norm", "nest", "dom2", "dom2", "dom2", "nest", "norm", "norm", "nest" ],
+    [ "nest", "norm", "norm", "nest", "nest", "acSP", "nest", "nest", "norm", "norm", "nest" ],
+    [ "nest", "norm", "acSP", "nest", "nest", "nest", "nest", "nest", "acSP", "norm", "nest" ],
+    [ "nest", "norm", "norm", "nest", "nest", "acSP", "nest", "nest", "norm", "norm", "nest" ],
     [ "nest", "norm", "norm", "nest", "dom3", "dom3", "dom3", "nest", "norm", "norm", "nest" ],
     [ "nest", "norm", "norm", "roid", "nest", "nest", "nest", "roid", "norm", "norm", "nest" ],
     [ "bas3", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "bas3" ],
-    [ "bas3", "bas3", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "bas3", "bas3" ]
+    [ "bas3", "bas3", "norm", "ATMG", "norm", "norm", "norm", "ATMG", "norm", "bas3", "bas3" ]
   ],
   "X_GRID": 11,
   "Y_GRID": 11,
