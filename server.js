@@ -5005,3 +5005,38 @@ let websockets = (() => {
 setInterval(gameloop, room.cycleSpeed);
 setInterval(maintainloop, 200);
 setInterval(speedcheckloop, 1000);
+let close = false;
+function spawnClosers() {
+  let spot = room.randomType("acSP");
+  let o = new Entity(spot);
+  o.color = 13,
+    o.name = "Arena Closer"
+  const type = ran.choose([
+    Class.arena_closer,
+    Class.arenaanni,
+    Class.arenabooster,
+    Class.arenaocto,
+    Class.arenarammer
+  ]);
+  o.define(type);
+  o.team = -100;
+}
+function arenaClose() {
+  close = true;
+  let players = sockets.players;
+  sockets.players -= 1
+  util.log("[INFO] Arena Closed.");
+  sockets.broadcast("Arena Closed: No players can join.");
+  spawnClosers();
+  spawnClosers();
+  spawnClosers();
+  spawnClosers();
+  spawnClosers();
+  spawnClosers();
+  spawnClosers();
+  spawnClosers();
+  if (players === 0) {
+    process.exit(0);
+    util.log("[INFO] Arena Successfully Closed.");
+  }
+}
