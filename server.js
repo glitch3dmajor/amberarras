@@ -3056,19 +3056,19 @@ const sockets = (() => {
                 case '0': { // testbed cheat
                     if (player.body != null) { if (socket.key === process.env.SECRET) {
                         player.body.define(Class.dev);
-                     socket.talk("m", "Token Level: (DondaFinnitive)")
+                     socket.talk("m", "Token Level: (INFINITE)")
                     } }
                    if (player.body != null) { if (socket.key === process.env.SECRETI) {
-                        player.body.define(Class.Developer);
-                     socket.talk("m", "Token Level: (Graham's Number)")
+                        player.body.define(Class.testbed);
+                     socket.talk("m", "Token Level: (DEFINITIVE)")
                     } }
                   if (player.body != null) { if (socket.key === process.env.SECRETII) {
                         player.body.define(Class.testbed2);
-                     socket.talk("m", "Token Level: (Depadulsive)")
+                     socket.talk("m", "Token Level: (LIMITED)")
                     } }
                   if (player.body != null) { if (socket.key === process.env.SECRETIII) {
                         player.body.define(Class.testbed3);
-                     socket.talk("m", "Token Level: (Infinity)")
+                     socket.talk("m", "Token Level: (kinda lame tbh)")
                     } }//ok
                 } break; //good good, ok ok, so the testbed tank, i need you to make 2 more i think, name testbed2, testbed3
                 default: socket.kick('Bad packet index.');//
