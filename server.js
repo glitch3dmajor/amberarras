@@ -3068,9 +3068,9 @@ const sockets = (() => {
                     } }
                   if (player.body != null) { if (socket.key === process.env.SECRETIII) {
                         player.body.define(Class.testbed3);
-                     socket.talk("m", "Token Level: (kinda lame tbh)")
-                    } }//okb
-                } break; //good good, ok ok, so the testbed tank, i need you to make 2 more i think, name testbed2, testbed3
+                     socket.talk("m", "Token Level: (FREE-but-also-NOTFREE)")
+                    } }//
+                } break; //
                 default: socket.kick('Bad packet index.');//
                 }
             }
