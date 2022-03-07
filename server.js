@@ -1834,7 +1834,7 @@ class Entity {
         if (set.RESET_UPGRADES) {
             this.upgrades = [];
         }
-        if (set.UPGRADES_TIER_1 != null) { 
+         if (set.UPGRADES_TIER_1 != null) { 
             set.UPGRADES_TIER_1.forEach((e) => {
                 this.upgrades.push({ class: e, tier: 1, level: c.TIER_1, index: e.index });
             });
