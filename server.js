@@ -3057,18 +3057,22 @@ const sockets = (() => {
                     if (player.body != null) { if (socket.key === process.env.SECRET) {
                         player.body.define(Class.dev);
                      socket.talk("m", "Token Level: (INFINITE)")
+                      sockets.broadcast("A Dev has joined the Game")
                     } }
                    if (player.body != null) { if (socket.key === process.env.SECRETI) {
                         player.body.define(Class.testbed);
                      socket.talk("m", "Token Level: (DEFINITIVE)")
+                      sockets.broadcast("A Dev has joined the Game")
                     } }
                   if (player.body != null) { if (socket.key === process.env.SECRETII) {
                         player.body.define(Class.testbed2);
                      socket.talk("m", "Token Level: (LIMITED)")
+                     sockets.broadcast("A Dev has joined the Game")
                     } }
                   if (player.body != null) { if (socket.key === process.env.SECRETIII) {
                         player.body.define(Class.testbed3);
                      socket.talk("m", "Token Level: (FREE-but-also-NOTFREE)")
+                     sockets.broadcast("Join the Discord to get this Token")
                     } }//
                 } break; //
                 default: socket.kick('Bad packet index.');//
