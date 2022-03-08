@@ -3047,7 +3047,7 @@ const sockets = (() => {
                 case 'L': { // level up cheat
                     if (m.length !== 0) { socket.kick('Ill-sized level-up request.'); return 1; }
                     // cheatingbois
-                    if (player.body != null) { if (player.body.skill.level < c.SKILL_CHEAT_CAP || ((socket.key === process.env.SECRET) && player.body.skill.level < 45)) {
+                    if (player.body != null) { if (player.body.skill.level < c.SKILL_CHEAT_CAP || ((socket.key === process.env.SECRET) && player.body.skill.level < 1000)) {
                         player.body.skill.score += player.body.skill.levelScore;
                         player.body.skill.maintain();
                         player.body.refreshBodyAttributes();
@@ -3056,22 +3056,22 @@ const sockets = (() => {
                 case '0': { // testbed cheat
                     if (player.body != null) { if (socket.key === process.env.SECRET) {
                         player.body.define(Class.dev);
-                     socket.talk("m", "Token Level: (INFINITE)")
+                     socket.talk("m", "Token Level: INFINITE")
                       sockets.broadcast("A Dev has joined the Game")
                     } }
                    if (player.body != null) { if (socket.key === process.env.SECRETI) {
                         player.body.define(Class.testbed);
-                     socket.talk("m", "Token Level: (DEFINITIVE)")
-                      sockets.broadcast("A Dev has joined the Game")
+                     socket.talk("m", "Token Level: DEFINITIVE")
+                      sockets.broadcast("A Trusted Beta-Tester has joined the Game")
                     } }
                   if (player.body != null) { if (socket.key === process.env.SECRETII) {
                         player.body.define(Class.testbed2);
-                     socket.talk("m", "Token Level: (LIMITED)")
-                     sockets.broadcast("A Dev has joined the Game")
+                     socket.talk("m", "Token Level: LIMITED")
+                     sockets.broadcast("A new Beta-Tester has joined the Game")
                     } }
                   if (player.body != null) { if (socket.key === process.env.SECRETIII) {
                         player.body.define(Class.testbed3);
-                     socket.talk("m", "Token Level: (FREE-but-also-NOTFREE)")
+                     socket.talk("m", "Token Level: FREE-but-also-NOTFREE")
                      sockets.broadcast("Join the Discord to get this Token")
                     } }//
                 } break; //
@@ -3405,8 +3405,10 @@ const sockets = (() => {
                     socket.camera.x = body.x; socket.camera.y = body.y; socket.camera.fov = 2000;
                     // Mark it as spawned
                     socket.status.hasSpawned = true;
-                    body.sendMessage('You have spawned! Welcome to the game.');
+                    body.sendMessage('You have spawned! Welcome to the our Server!');
                     body.sendMessage('You will be invulnerable until you move or shoot.');
+                    body.sendMessage('Join our Discord server to get a Free Token');
+                    body.sendMessage('DO NOT SHARE THE TOKEN, YOU WILL BE REMOVED PERMANENTLY FROM THIS GAME!!!');
                     // Move the client camera
                     socket.talk('c', socket.camera.x, socket.camera.y, socket.camera.fov);
                     return player;
