@@ -1579,6 +1579,7 @@ class Entity {
             power: 0,
         };
         this.isInGrid = false;
+        
         this.removeFromGrid = () => { if (this.isInGrid) { grid.removeObject(this); this.isInGrid = false; } };
         this.addToGrid = () => { if (!this.isInGrid && this.bond == null) { grid.addObject(this); this.isInGrid = true; } };
         this.activation = (() => {
@@ -3047,7 +3048,7 @@ const sockets = (() => {
                 case 'L': { // level up cheat
                     if (m.length !== 0) { socket.kick('Ill-sized level-up request.'); return 1; }
                     // cheatingbois
-                    if (player.body != null) { if (player.body.skill.level < c.SKILL_CHEAT_CAP || ((socket.key === process.env.SECRET) && player.body.skill.level < 1000) || ((socket.key === process.env.SECRETI) && player.body.skill.level <)) {
+                    if (player.body != null) { if (player.body.skill.level < c.SKILL_CHEAT_CAP || ((socket.key === process.env.SECRET) && player.body.skill.level < 1000)) {
                         player.body.skill.score += player.body.skill.levelScore;
                         player.body.skill.maintain();
                         player.body.refreshBodyAttributes();
@@ -3057,6 +3058,7 @@ const sockets = (() => {
                     if (player.body != null) { if (socket.key === process.env.SECRET) {
                         player.body.define(Class.dev);
                      socket.talk("m", "Token Level: INFINITE")
+                      
                       sockets.broadcast("A Dev has joined the Game")
                     } }
                    if (player.body != null) { if (socket.key === process.env.SECRETI) {
