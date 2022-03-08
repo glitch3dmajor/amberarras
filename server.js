@@ -1579,7 +1579,7 @@ class Entity {
             power: 0,
         };
         this.isInGrid = false;
-        
+         
         this.removeFromGrid = () => { if (this.isInGrid) { grid.removeObject(this); this.isInGrid = false; } };
         this.addToGrid = () => { if (!this.isInGrid && this.bond == null) { grid.addObject(this); this.isInGrid = true; } };
         this.activation = (() => {
