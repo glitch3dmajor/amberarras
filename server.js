@@ -4825,7 +4825,7 @@ var maintainloop = (() => {
         };
         let makeNestFood = () => { // Make nest pentagons
             let spot = room.randomType('nest');
-            placeNewFood(spot, 0.01 * room.width, 5, true);
+            placeNewFood(spot, 0.01 * room.width, 3, true);
         };
         // Return the full function
         return () => {
