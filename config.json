@@ -11,8 +11,8 @@
   "runSpeed": 1.5,
   "maxHeartbeatInterval": 300000,
   "verbose": true,
-  "WIDTH": 1000,
-  "HEIGHT": 1000,
+  "WIDTH": 7500,
+  "HEIGHT": 7500,
   "MODE": "tdm",
   "RANDOM_COLORS": true,
   "BANNED_CHARACTER_REGEX": "/[\uFDFD\u200E\u0000]/gi", 
@@ -52,7 +52,7 @@
     0.02,
     0
   ],
-  "MAX_SKILL": 9,
+  "MAX_SKILL": 40,
   "SOFT_MAX_SKILL": 0.59,
   "TIER_1": 10,
   "TIER_2": 25,
@@ -65,6 +65,6 @@
   "MIN_SPEED": 0.001,
   "FOOD_AMOUNT": 0.00000004, 
   "SKILL_BOOST": 5,
-  "BOTS": 500,
+  "BOTS": 10,
   "GLASS_HEALTH_FACTOR": 2
 }
