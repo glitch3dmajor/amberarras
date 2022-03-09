@@ -11,10 +11,10 @@
   "runSpeed": 1.5,
   "maxHeartbeatInterval": 300000,
   "verbose": true,
-  "WIDTH": 7500,
-  "HEIGHT": 7500,
+  "WIDTH": 1000,
+  "HEIGHT": 1000,
   "MODE": "tdm",
-  "RANDOM_COLORS": false,
+  "RANDOM_COLORS": true,
   "BANNED_CHARACTER_REGEX": "/[\uFDFD\u200E\u0000]/gi", 
   "ROOM_SETUP": [
     [ "bas2", "bas2", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "bas2", "bas2" ],
@@ -65,6 +65,6 @@
   "MIN_SPEED": 0.001,
   "FOOD_AMOUNT": 0.00000004, 
   "SKILL_BOOST": 5,
-  "BOTS": 5,
+  "BOTS": 500,
   "GLASS_HEALTH_FACTOR": 2
 }
