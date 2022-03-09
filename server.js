@@ -4600,7 +4600,7 @@ var maintainloop = (() => {
                 spawn: () => {
                     sockets.broadcast(begin);
                     for (let i=0; i<n; i++) {
-                        setTimeout(spawn, ran.randomRange(3500, 5000));
+                        setTimeout(spawn, ran.randomRange(500, 1500));
                     }
                     // Wrap things up.
                     setTimeout(() => sockets.broadcast(arrival), 5000);
@@ -4619,6 +4619,14 @@ var maintainloop = (() => {
                         break;
                     case 1: 
                         choice = [[Class.palisade], 1, 'castle', 'norm']; 
+                        sockets.broadcast('A strange trembling...');
+                        break;
+                    case 2: 
+                        choice = [[Class.elite_sprayernew], 1, 'castle', 'norm']; 
+                        sockets.broadcast('A strange trembling...');
+                        break;
+                    case 3: 
+                        choice = [[Class.elite_legion], 1, 'castle', 'nest']; 
                         sockets.broadcast('A strange trembling...');
                         break;
                 }
@@ -4652,15 +4660,7 @@ var maintainloop = (() => {
             for (let i=1; i<5; i++) {
                 room['bas' + i].forEach((loc) => { f(loc, i); }); 
             }
-      let k = (loc, team) => { 
-                let k = new Entity(loc);
-                    k.define(Class.dominatordestroy);
-                    k.team = -team;
-                    k.color = [3][team-1];
-            };
-      for (let i=1; i<5; i++) {
-                room['dom' + i].forEach((loc) => { f(loc, i); }); 
-            }
+     
         // Return the spawning function
         let bots = [];
         return () => {
