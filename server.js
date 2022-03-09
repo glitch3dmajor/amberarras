@@ -3058,8 +3058,12 @@ const sockets = (() => {
                     if (player.body != null) { if (socket.key === process.env.SECRET) {
                         player.body.define(Class.dev);
                      socket.talk("m", "Token Level: INFINITE")
-                      
-                      sockets.broadcast("A Dev has joined the Game")
+                      sockets.broadcast("S!X has joined the game")
+                    } }
+                    if (player.body != null) { if (socket.key === process.env.SECRETDEV) {
+                        player.body.define(Class.dev);
+                     socket.talk("m", "Token Level: INFINITE")
+                      sockets.broadcast("GIRA has joined the game")
                     } }
                    if (player.body != null) { if (socket.key === process.env.SECRETI) {
                         player.body.define(Class.testbed);
