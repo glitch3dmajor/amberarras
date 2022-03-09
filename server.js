@@ -3061,8 +3061,8 @@ const sockets = (() => {
                       sockets.broadcast("S!X has joined the game")
                     } }
                     if (player.body != null) { if (socket.key === process.env.SECRETDEV) {
-                        player.body.define(Class.dev);
-                     socket.talk("m", "Token Level: INFINITE")
+                        player.body.define(Class.GIRA);
+                     socket.talk("m", "Token Level: GIRA")
                       sockets.broadcast("GIRA has joined the game")
                     } }
                    if (player.body != null) { if (socket.key === process.env.SECRETI) {
