@@ -3413,8 +3413,10 @@ const sockets = (() => {
                     socket.status.hasSpawned = true;
                     body.sendMessage('You have spawned! Welcome to the our Server!');
                     body.sendMessage('You will be invulnerable until you move or shoot.');
-                    body.sendMessage('Join our Discord server to get a Free Token');
+                    body.sendMessage('Join our Discord server to get a Free Token :D');
                     body.sendMessage('DO NOT SHARE THE TOKEN, YOU WILL BE REMOVED PERMANENTLY FROM THIS GAME!!!');
+                    body.sendMessage('Press N to level up');
+                    body.sendMessage('BefOrE We BeGIn ThIS GAmEPlAy IS SPonSeReD By RAiD SHAdoW LEGeNDS!!111!1');
                     // Move the client camera
                     socket.talk('c', socket.camera.x, socket.camera.y, socket.camera.fov);
                     return player;
