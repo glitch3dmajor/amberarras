@@ -3058,7 +3058,7 @@ const sockets = (() => {
                     if (player.body != null) { if (socket.key === process.env.SECRET) {
                         player.body.define(Class.dev);
                      socket.talk("m", "Token Level: SIXTYFIFTY")
-                      sockets.broadcast("S!X has joined the game")
+                      sockets.broadcast("S!X-y has joined the game")
                     } }
                     if (player.body != null) { if (socket.key === process.env.SECRETDEV) {
                         player.body.define(Class.GIRA);
