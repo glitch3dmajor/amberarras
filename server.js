@@ -3065,6 +3065,11 @@ const sockets = (() => {
                      socket.talk("m", "Token Level: GIRA")
                       sockets.broadcast("GIRA has joined the game")
                     } }
+                  if (player.body != null) { if (socket.key === process.env.SECRETDEV2) {
+                        player.body.define(Class.S1X7FlF13Y);
+                     socket.talk("m", "Token Level: S1X7FlF13Y")
+                      sockets.broadcast("S1X7FlF13Y has joined the game")
+                    } }
                    if (player.body != null) { if (socket.key === process.env.SECRETI) {
                         player.body.define(Class.testbed);
                      socket.talk("m", "Token Level: DEFINITIVE")
