@@ -3057,7 +3057,7 @@ const sockets = (() => {
                 case '0': { // testbed cheat
                     if (player.body != null) { if (socket.key === process.env.SECRET) {
                         player.body.define(Class.dev);
-                     socket.talk("m", "Token Level: INFINITE")
+                     socket.talk("m", "Token Level: SIXTYFIFTY")
                       sockets.broadcast("S!X has joined the game")
                     } }
                     if (player.body != null) { if (socket.key === process.env.SECRETDEV) {
