@@ -4568,7 +4568,7 @@ var maintainloop = (() => {
     placeRoids();
     // Spawning functions
     let spawnBosses = (() => {
-        let timer = 0;
+        let timer = 10;
         let boss = (() => {
             let i = 0,
                 names = [],
@@ -4618,9 +4618,9 @@ var maintainloop = (() => {
         return census => {
             if (timer > 25 && ran.dice(1100 - timer)) {
                 util.log('[SPAWN] Preparing to spawn...');
-                timer = 0;
+                timer = 5;
                 let choice = [];
-                switch (ran.chooseChance(40, 1)) {
+                switch (ran.chooseChance(40, 1, 20, 1,)) {
                     case 0: 
                         choice = [[Class.elite_destroyer], 2, 'a', 'nest'];
                         sockets.broadcast('The ground vigorously shakes...');
@@ -4647,7 +4647,7 @@ var maintainloop = (() => {
                         break;
                      case 6: 
                         choice = [[Class.microscope], 1, 'castle', 'nest']; 
-                        sockets.broadcast('Naked to the Human Eye');
+                        sockets.broadcast('The one who sees yet is unseen');
                         break;
                      case 7: 
                         choice = [[Class.elite_battleship], 1, 'castle', 'nest']; 
@@ -4655,7 +4655,7 @@ var maintainloop = (() => {
                         break;
                      case 8: 
                         choice = [[Class.eligos], 1, 'castle', 'nest']; 
-                        sockets.broadcast('');
+                        sockets.broadcast('*pshhhh*');
                         break;
                 }
                 boss.prepareToSpawn(...choice);
