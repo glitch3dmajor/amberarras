@@ -71,12 +71,14 @@ const room = {
     room.findType('bas2');
     room.findType('bas3');
     room.findType('bas4');
+    room.findType('bas5');  
     room.findType('roid');
     room.findType('rock');
     room.findType('dom1');
     room.findType('dom2');
     room.findType('dom3'); 
     room.findType('dom4');
+    room.findType('dom5');
     room.findType('prim');
     room.nestFoodAmount = 1.5 * Math.sqrt(room.nest.length) / room.xgrid / room.ygrid;
     room.random = () => {
@@ -2308,7 +2310,8 @@ class Entity {
                 (this.team !== -1 && room.isIn('bas1', loc)) ||
                 (this.team !== -2 && room.isIn('bas2', loc)) ||
                 (this.team !== -3 && room.isIn('bas3', loc)) ||
-                (this.team !== -4 && room.isIn('bas4', loc)) 
+                (this.team !== -4 && room.isIn('bas4', loc)) ||
+                (this.team !== -5 && room.isIn('bas5', loc)) 
               
             ) { this.kill(); }
         }
@@ -4666,6 +4669,17 @@ var maintainloop = (() => {
             };
             for (let i=1; i<5; i++) {
                 room['bas' + i].forEach((loc) => { f(loc, i); }); 
+            }
+      let makenpcs = (() => {
+        // Make base protectors if needed.
+            let f = (loc, team) => { 
+                let o = new Entity(loc);
+                    o.define(Class.dominatordestroy);
+                    o.team = -team;
+                    o.color = [3][team-1];
+            };
+            for (let i=1; i<5; i++) {
+                room['bas5' + i].forEach((loc) => { f(loc, i); }); 
             }
      
         // Return the spawning function
