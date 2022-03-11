@@ -4637,6 +4637,26 @@ var maintainloop = (() => {
                         choice = [[Class.elite_legion], 1, 'castle', 'nest']; 
                         sockets.broadcast('A fog rolls in...');
                         break;
+                    case 4: 
+                        choice = [[Class.kinetic], 1, 'castle', 'nest']; 
+                        sockets.broadcast('The sky seems to vibrate with a buzz...');
+                        break;
+                    case 5: 
+                        choice = [[Class.elite_drone], 1, 'castle', 'nest']; 
+                        sockets.broadcast('They appear...');
+                        break;
+                     case 6: 
+                        choice = [[Class.microscope], 1, 'castle', 'nest']; 
+                        sockets.broadcast('Naked to the Human Eye');
+                        break;
+                     case 7: 
+                        choice = [[Class.elite_battleship], 1, 'castle', 'nest']; 
+                        sockets.broadcast('The stars rain down...');
+                        break;
+                     case 8: 
+                        choice = [[Class.eligos], 1, 'castle', 'nest']; 
+                        sockets.broadcast('');
+                        break;
                 }
                 boss.prepareToSpawn(...choice);
                 setTimeout(boss.spawn, 3000);
