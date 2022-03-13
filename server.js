@@ -4669,7 +4669,7 @@ var maintainloop = (() => {
             let spot, i = 30;
             do { spot = room.randomType('nest'); i--; if (!i) return 0; } while (dirtyCheck(spot, 100));
             let type = (ran.dice(80)) ? ran.choose([Class.sentryGun, Class.sentrySwarm, Class.sentryTrap]) : Class.crasher;
-            let o = new Entity(spot);
+            let o = new Entity(spot.nest);
                 o.define(type);
                 o.team = -100;
         }
@@ -4866,7 +4866,7 @@ var maintainloop = (() => {
                 [3]: 0, // Penta
                 [4]: 0, // Beta
                 [5]: 0, // Alpha
-                [6]: 0,
+                [6]: 0, // Gem
                 [7]: 0,
                 [8]: 0,
                 [9]: 0,
@@ -4882,7 +4882,7 @@ var maintainloop = (() => {
                 [3]: 0, // Penta
                 [4]: 0, // Beta
                 [5]: 0, // Alpha
-                [6]: 0,
+                [6]: 0, // Gem
                 [7]: 0,
                 [8]: 0,
                 [9]: 0,
