@@ -4635,7 +4635,7 @@ var maintainloop = (() => {
                         break;
                     case 3: 
                         choice = [[Class.elite_legion], 1, 'castle', 'nest']; 
-                        sockets.broadcast('A fog rolls in...');
+                        sockets.broadcast('A fog rolls in... and so does your doom...');
                         break;
                     case 4: 
                         choice = [[Class.kinetic], 1, 'castle', 'nest']; 
@@ -4665,7 +4665,7 @@ var maintainloop = (() => {
         };
     })();
     let spawnCrasher = census => {
-        if (ran.chance(0.2 -  0.01 * census.crasher / room.maxFood / room.nestFoodAmount)) {
+        if (ran.chance(20 -  10 * census.crasher / room.maxFood / room.nestFoodAmount)) {
             let spot, i = 30;
             do { spot = room.randomType('nest'); i--; if (!i) return 0; } while (dirtyCheck(spot, 100));
             let type = (ran.dice(80)) ? ran.choose([Class.sentryGun, Class.sentrySwarm, Class.sentryTrap]) : Class.crasher;
