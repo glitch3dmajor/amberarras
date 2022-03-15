@@ -4711,7 +4711,7 @@ var maintainloop = (() => {
                     let o = new Entity(room.random());
                     o.color = 17;
                     o.define(Class.bot);
-                    o.define(Class.basic, Class.twin, Class.machine, Class.smash, Class.sniper, Class.single, Class.staff, Class.swarmer, Class.flank, Class.director, Class.pound, Class.tri, Class.autoturreter, Class.trapper, Class.steamer);
+                    o.define(Class.basic);
                     o.name += ran.chooseBotName();
                     o.refreshBodyAttributes();
                     o.color = 17;
