@@ -4944,8 +4944,8 @@ var maintainloop = (() => {
                     o.foodCountup += Math.ceil(Math.abs(ran.gauss(0, 10)));
                     while (o.foodCountup >= (o.foodLevel + 1) * 100) {
                         o.foodCountup -= (o.foodLevel + 1) * 100;
-                        if (ran.chance(1 - cens[o.foodLevel + 1] / amount / proportions[o.foodLevel + 1])) {
-                            o.define(getFoodClass(o.foodLevel + 1));
+                        if (ran.chance(1 - cens[o.foodLevel + 2] / amount / proportions[o.foodLevel + 2])) {
+                            o.define(getFoodClass(o.foodLevel + 2));
                         }
                     }
                 }
