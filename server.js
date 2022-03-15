@@ -4665,7 +4665,7 @@ var maintainloop = (() => {
         };
     })();
     let spawnCrasher = census => {
-        if (ran.chance(1 -  0.5 * census.crasher / room.maxFood / room.nestFoodAmount)) {
+        if (ran.chance(10 -  5 * census.crasher / room.maxFood / room.nestFoodAmount)) {
             let spot, i = 30;
             do { spot = room.randomType('nest'); i--; if (!i) return 0; } while (dirtyCheck(spot, 100));
             let type = (ran.dice(80)) ? ran.choose([Class.sentryGun, Class.sentrySwarm, Class.sentryTrap]) : Class.crasher;
@@ -4944,8 +4944,9 @@ var maintainloop = (() => {
                     o.foodCountup += Math.ceil(Math.abs(ran.gauss(0, 10)));
                     while (o.foodCountup >= (o.foodLevel + 1) * 100) {
                         o.foodCountup -= (o.foodLevel + 1) * 100;
-                        if (ran.chance(1 - cens[o.foodLevel + 2] / amount / proportions[o.foodLevel + 2])) {
-                            o.define(getFoodClass(o.foodLevel + 2));
+                        if (ran.chance(1 - cens[o.foodLevel + 3] / amount / proportions[o.foodLevel + 3])) {
+                            o.define(getFoodClass(o.foodLevel + 1));
+                           o.define(getFoodClass(o.foodLevel + 2));
                         }
                     }
                 }
