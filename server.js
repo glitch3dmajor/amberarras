@@ -78,6 +78,7 @@ const room = {
     room.findType('dom3'); 
     room.findType('dom4');
     room.findType('domm');
+    room.findType('anti');
     room.nestFoodAmount = 1.5 * Math.sqrt(room.nest.length) / room.xgrid / room.ygrid;
     room.random = () => {
         return {
@@ -4706,7 +4707,7 @@ let o = new Entity(loc);
 o.define(Class.antitanknothing);
 o.team = -99
 o.color = 3
-  o.name = "Anti-Tank "
+  o.name = "Anti-Tank Machine Gun"
 };
         // Return the spawning function
         let bots = [];
