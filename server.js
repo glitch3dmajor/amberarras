@@ -4630,11 +4630,11 @@ var maintainloop = (() => {
                         sockets.broadcast('The earth trembles, theyre here...');
                         break;
                     case 2: 
-                        choice = [[Class.elite_sprayernew], 1, 'castle', 'norm']; 
+                        choice = [[Class.CK2], 1, 'castle', 'norm']; 
                         sockets.broadcast('A strange yet familiar trembling...');
                         break;
                     case 3: 
-                        choice = [[Class.elite_legion], 1, 'castle', 'nest']; 
+                        choice = [[Class.CK7], 1, 'castle', 'nest']; 
                         sockets.broadcast('A fog rolls in...');
                         break;
                     case 4: 
@@ -4642,7 +4642,7 @@ var maintainloop = (() => {
                         sockets.broadcast('The sky seems to vibrate with a buzz...');
                         break;
                     case 5: 
-                        choice = [[Class.elite_drone], 1, 'castle', 'nest']; 
+                        choice = [[Class.CK6], 1, 'castle', 'nest']; 
                         sockets.broadcast('They appear...');
                         break;
                      case 6: 
@@ -4658,8 +4658,8 @@ var maintainloop = (() => {
                         sockets.broadcast('The sound of rushing water envelops the server');
                         break;
                     case 8: 
-                        choice = [[Class.infinitus], 1, 'castle', 'nest']; 
-                        sockets.broadcast('There is no chance to beat this, ');
+                        choice = [[Class.CK8], 1, 'castle', 'nest']; 
+                        sockets.broadcast('There is no chance to beat whats coming...');
                         break;
                 }
                 boss.prepareToSpawn(...choice);
