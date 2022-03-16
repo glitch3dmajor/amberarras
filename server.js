@@ -4635,7 +4635,7 @@ var maintainloop = (() => {
                         break;
                     case 3: 
                         choice = [[Class.elite_legion], 1, 'castle', 'nest']; 
-                        sockets.broadcast('A fog rolls in... and so does your doom...');
+                        sockets.broadcast('A fog rolls in...');
                         break;
                     case 4: 
                         choice = [[Class.kinetic], 1, 'castle', 'nest']; 
@@ -4665,7 +4665,7 @@ var maintainloop = (() => {
         };
     })();
     let spawnCrasher = census => {
-        if (ran.chance(20 -  10 * census.crasher / room.maxFood / room.nestFoodAmount)) {
+        if (ran.chance(1 -  0.5 * census.crasher / room.maxFood / room.nestFoodAmount)) {
             let spot, i = 30;
             do { spot = room.randomType('nest'); i--; if (!i) return 0; } while (dirtyCheck(spot, 100));
             let type = (ran.dice(80)) ? ran.choose([Class.sentryGun, Class.sentrySwarm, Class.sentryTrap]) : Class.crasher;
@@ -4711,7 +4711,7 @@ var maintainloop = (() => {
                     let o = new Entity(room.random());
                     o.color = 17;
                     o.define(Class.bot);
-                    o.define(Class.basic);
+                    o.define(Class.basic, Class.twin, Class.machine, Class.smash, Class.sniper, Class.single, Class.staff, Class.swarmer, Class.flank, Class.director, Class.pound, Class.tri, Class.autoturreter, Class.trapper, Class.steamer);
                     o.name += ran.chooseBotName();
                     o.refreshBodyAttributes();
                     o.color = 17;
@@ -4944,9 +4944,8 @@ var maintainloop = (() => {
                     o.foodCountup += Math.ceil(Math.abs(ran.gauss(0, 10)));
                     while (o.foodCountup >= (o.foodLevel + 1) * 100) {
                         o.foodCountup -= (o.foodLevel + 1) * 100;
-                        if (ran.chance(1 - cens[o.foodLevel + 3] / amount / proportions[o.foodLevel + 3])) {
+                        if (ran.chance(1 - cens[o.foodLevel + 1] / amount / proportions[o.foodLevel + 1])) {
                             o.define(getFoodClass(o.foodLevel + 1));
-                           o.define(getFoodClass(o.foodLevel + 2));
                         }
                     }
                 }
