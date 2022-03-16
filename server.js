@@ -4663,8 +4663,12 @@ var maintainloop = (() => {
                         sockets.broadcast('There is no chance to beat whats coming...');
                         break;
                     case 10: 
-                        choice = [[Class.], 1, 'castle', 'nest']; 
-                        sockets.broadcast('There is no chance to beat whats coming...');
+                        choice = [[Class.aries], 1.5, 'castle', 'nest']; 
+                        sockets.broadcast('The stars seem to allign...');
+                        break;
+                    case 11: 
+                        choice = [[Class.knockout], 0.5, 'castle', 'nest']; 
+                        sockets.broadcast('A maniacal laughter emerges');
                         break;
                 }
                 boss.prepareToSpawn(...choice);
@@ -4702,7 +4706,7 @@ var maintainloop = (() => {
 let o = new Entity(loc);
 o.define(Class.dominatordestroy);
 o.team = -99
-o.color = 3
+o.color = 3  
 };
        
       if (room.anti)
