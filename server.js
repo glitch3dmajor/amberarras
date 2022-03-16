@@ -4655,7 +4655,7 @@ var maintainloop = (() => {
                         break;
                      case 8: 
                         choice = [[Class.eligos], 1, 'castle', 'nest']; 
-                        sockets.broadcast('*pshhhh*');
+                        sockets.broadcast('The sound of rushing water envelops the server');
                         break;
                 }
                 boss.prepareToSpawn(...choice);
@@ -4693,9 +4693,9 @@ var maintainloop = (() => {
         let bots = [];
         return () => {
             let census = {
-                crasher: 15,
-                miniboss: 5,
-                tank: 15,
+                crasher: 0,
+                miniboss: 0,
+                tank: 0,
             };    
             let npcs = entities.map(function npcCensus(instance) {
                 if (census[instance.type] != null) {
@@ -4708,10 +4708,12 @@ var maintainloop = (() => {
             spawnBosses(census);
             
                 if (bots.length < c.BOTS) {
-                    let o = new Entity(room.random());
+                   /* let o = new Entity(room.random());
+                      let newClass = arrayOfClasses[Math.floor(Math.random() * arrayOfClasses.length)]; */
                     o.color = 17;
-                    o.define(Class.bot, Class.basic);
-                    o.define(Class.basic, Class.twin, Class.machine, Class.smash, Class.sniper, Class.single, Class.staff, Class.swarmer, Class.flank, Class.director, Class.pound, Class.tri, Class.autoturreter, Class.trapper, Class.steamer);
+                    o.define(Class.bot);
+                      let arrayOfClasses = [ Class.twin, Class.machine, Class.smash, Class.sniper, Class.single, Class.staff, Class.swarmer, Class.flank, Class.director, Class.pound, Class.tri, Class.autoturreter, Class.trapper, Class.steamer]
+                    o.define(newClass);
                     o.name += ran.chooseBotName();
                     o.refreshBodyAttributes();
                     o.color = 17;
@@ -4721,8 +4723,8 @@ var maintainloop = (() => {
                 bots = bots.filter(e => { return !e.isDead(); });
                 // Slowly upgrade them
                 bots.forEach(o => {
-                    if (o.skill.level = 45){
-                        o.skill.score += 35;
+                    if (o.skill.level < 45){
+                        o.skill.score += 9999;
                         o.skill.maintain();
                     }
                 });
