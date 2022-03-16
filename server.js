@@ -4622,7 +4622,7 @@ var maintainloop = (() => {
                 let choice = [];
                 switch (ran.chooseChance(40, 1, 20, 1,)) {
                     case 0: 
-                        choice = [[Class.BX1], 2, 'a', 'nest'];
+                        choice = [[Class.BX1], 1, 'a', 'nest'];
                         sockets.broadcast('The ground vigorously shakes...');
                         break;
                     case 1: 
