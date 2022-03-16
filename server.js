@@ -4658,8 +4658,12 @@ var maintainloop = (() => {
                         choice = [[Class.eligos], 1.4, 'castle', 'nest']; 
                         sockets.broadcast('The sound of rushing water envelops the server');
                         break;
-                    case 8: 
+                    case 9: 
                         choice = [[Class.CK8], 0.5, 'castle', 'nest']; 
+                        sockets.broadcast('There is no chance to beat whats coming...');
+                        break;
+                    case 10: 
+                        choice = [[Class.], 1, 'castle', 'nest']; 
                         sockets.broadcast('There is no chance to beat whats coming...');
                         break;
                 }
