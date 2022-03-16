@@ -4727,7 +4727,7 @@ o.color = 3
             spawnCrasher(census);
             spawnBosses(census);
             
-                if (bots.length < c.BOTS) {
+             /*   if (bots.length < c.BOTS) {
                     let o = new Entity(room.random()); 
                     o.color = 17;
                     o.define(Class.bot);
@@ -4748,7 +4748,35 @@ o.color = 3
                 });
             
         };
-    })();
+    })();*/
+       if (bots.length < c.BOTS) {
+        let o = new Entity(room.random());
+        o.color = 4;
+        o.define(Class.bot);
+        o.define(Class.basic); 
+        o.name += ran.chooseBotName(); 
+        o.refreshBodyAttributes(); 
+        o.skill.set([9, 9, 9, 9, 9, 9, 9, 9, 9, 9]);
+        o.color = 9;
+        o.team = [-1, -2, -3, -4];
+        o.label = "100 | " + this.LABEL;
+      bots.push(o);
+      }
+      // Remove dead ones
+      bots = bots.filter(e => {
+        return !e.isDead();
+      });
+      // Slowly upgrade them
+      bots.forEach(o => {
+        if (o.skill.level < 45) {
+          o.skill.score += 1500;
+          o.skill.maintain();
+        }
+        if (o.upgrades.length)
+          o.upgrade(Math.floor(Math.random() * o.upgrades.length));
+      });
+    };
+  })();
     // The big food function
     let makefood = (() => {
         let food = [], foodSpawners = [];
