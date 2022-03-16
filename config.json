@@ -26,19 +26,19 @@
     [ "nest", "norm", "norm", "roid", "nest", "nest", "nest", "roid", "norm", "norm", "nest" ],
     
     
-    [ "nest", "norm", "norm", "nest", "dom1", "nest", "dom2", "nest", "norm", "norm", "nest" ],
+    [ "nest", "norm", "norm", "domm", "dom1", "nest", "dom2", "domm", "norm", "norm", "nest" ],
     
     
     [ "nest", "norm", "nest", "dom1", "nest", "roid", "nest", "dom2", "nest", "norm", "nest" ],
     
     
-    [ "nest", "roid", "norm", "nest", "roid", "norm", "roid", "nest", "norm", "roid", "nest" ],
+    [ "nest", "roid", "norm", "nest", "roid", "domm", "roid", "nest", "norm", "roid", "nest" ],
     
     
     [ "nest", "norm", "nest", "dom3", "nest", "roid", "nest", "dom4", "nest", "norm", "nest" ],
     
     
-    [ "nest", "norm", "norm", "nest", "dom3", "nest", "dom4", "nest", "norm", "norm", "nest" ],
+    [ "nest", "norm", "norm", "domm", "dom3", "nest", "dom4", "domm", "norm", "norm", "nest" ],
     
     
     [ "nest", "norm", "norm", "roid", "nest", "nest", "nest", "roid", "norm", "norm", "nest" ],
