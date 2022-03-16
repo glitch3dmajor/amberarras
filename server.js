@@ -4708,12 +4708,12 @@ var maintainloop = (() => {
             spawnBosses(census);
             
                 if (bots.length < c.BOTS) {
-                   /* let o = new Entity(room.random());
-                      let newClass = arrayOfClasses[Math.floor(Math.random() * arrayOfClasses.length)]; */
+                    let o = new Entity(room.random()); 
+               /*       let newClass = arrayOfClasses[Math.floor(Math.random() * arrayOfClasses.length)]; */
                     o.color = 17;
                     o.define(Class.bot);
-                      let arrayOfClasses = [ Class.twin, Class.machine, Class.smash, Class.sniper, Class.single, Class.staff, Class.swarmer, Class.flank, Class.director, Class.pound, Class.tri, Class.autoturreter, Class.trapper, Class.steamer]
-                    o.define(newClass);
+                     /* let arrayOfClasses = [ Class.twin, Class.machine, Class.smash, Class.sniper, Class.single, Class.staff, Class.swarmer, Class.flank, Class.director, Class.pound, Class.tri, Class.autoturreter, Class.trapper, Class.steamer] */
+                    o.define(Class.basic);
                     o.name += ran.chooseBotName();
                     o.refreshBodyAttributes();
                     o.color = 17;
@@ -4724,7 +4724,7 @@ var maintainloop = (() => {
                 // Slowly upgrade them
                 bots.forEach(o => {
                     if (o.skill.level < 45){
-                        o.skill.score += 9999;
+                        o.skill.score += 500;
                         o.skill.maintain();
                     }
                 });
