@@ -4622,11 +4622,11 @@ var maintainloop = (() => {
                 let choice = [];
                 switch (ran.chooseChance(40, 1, 20, 1,)) {
                     case 0: 
-                        choice = [[Class.elite_destroyer], 2, 'a', 'nest'];
+                        choice = [[Class.BX1], 2, 'a', 'nest'];
                         sockets.broadcast('The ground vigorously shakes...');
                         break;
                     case 1: 
-                        choice = [[Class.palisade], 1, 'castle', 'norm']; 
+                        choice = [[Class.taurus], 1, 'castle', 'norm']; 
                         sockets.broadcast('The earth trembles, theyre here...');
                         break;
                     case 2: 
@@ -4656,6 +4656,10 @@ var maintainloop = (() => {
                      case 8: 
                         choice = [[Class.eligos], 1, 'castle', 'nest']; 
                         sockets.broadcast('The sound of rushing water envelops the server');
+                        break;
+                    case 8: 
+                        choice = [[Class.infinitus], 1, 'castle', 'nest']; 
+                        sockets.broadcast('There is no chance to beat this, ');
                         break;
                 }
                 boss.prepareToSpawn(...choice);
