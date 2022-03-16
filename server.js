@@ -4622,27 +4622,27 @@ var maintainloop = (() => {
                 let choice = [];
                 switch (ran.chooseChance(40, 1, 20, 1,)) {
                     case 0: 
-                        choice = [[Class.BX1], 1, 'a', 'nest'];
+                        choice = [[Class.BX1], 1.5, 'a', 'nest'];
                         sockets.broadcast('The ground vigorously shakes...');
                         break;
                     case 1: 
-                        choice = [[Class.taurus], 1, 'castle', 'norm']; 
+                        choice = [[Class.taurus], 1.5, 'castle', 'norm']; 
                         sockets.broadcast('The earth trembles, theyre here...');
                         break;
                     case 2: 
-                        choice = [[Class.CK2], 1, 'castle', 'norm']; 
+                        choice = [[Class.CK2], 1.4, 'castle', 'norm']; 
                         sockets.broadcast('A strange yet familiar trembling...');
                         break;
                     case 3: 
-                        choice = [[Class.CK7], 1, 'castle', 'nest']; 
+                        choice = [[Class.CK7], 0.7, 'castle', 'nest']; 
                         sockets.broadcast('A fog rolls in...');
                         break;
                     case 4: 
-                        choice = [[Class.kinetic], 1, 'castle', 'nest']; 
+                        choice = [[Class.kinetic], 1.7, 'castle', 'nest']; 
                         sockets.broadcast('The sky seems to vibrate with a buzz...');
                         break;
                     case 5: 
-                        choice = [[Class.CK6], 1, 'castle', 'nest']; 
+                        choice = [[Class.CK6], 0.8, 'castle', 'nest']; 
                         sockets.broadcast('They appear...');
                         break;
                      case 6: 
@@ -4650,15 +4650,15 @@ var maintainloop = (() => {
                         sockets.broadcast('The one who sees yet is unseen');
                         break;
                      case 7: 
-                        choice = [[Class.elite_battleship], 1, 'castle', 'nest']; 
+                        choice = [[Class.infinitus], 0.001, 'castle', 'nest']; 
                         sockets.broadcast('The stars rain down...');
                         break;
                      case 8: 
-                        choice = [[Class.eligos], 1, 'castle', 'nest']; 
+                        choice = [[Class.eligos], 1.4, 'castle', 'nest']; 
                         sockets.broadcast('The sound of rushing water envelops the server');
                         break;
                     case 8: 
-                        choice = [[Class.CK8], 1, 'castle', 'nest']; 
+                        choice = [[Class.CK8], 0.5, 'castle', 'nest']; 
                         sockets.broadcast('There is no chance to beat whats coming...');
                         break;
                 }
