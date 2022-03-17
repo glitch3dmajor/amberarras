@@ -80,6 +80,7 @@ const room = {
     room.findType('domm');
     room.findType('anti');
     room.findType('doom');
+    room.findType('domg');
     room.findType('boom');
     room.nestFoodAmount = 1.5 * Math.sqrt(room.nest.length) / room.xgrid / room.ygrid;
     room.random = () => {
@@ -4625,15 +4626,16 @@ var maintainloop = (() => {
                 let choice = [];
                 switch (ran.chooseChance(40, 1, 20, 1,)) {
                     case 0: 
-                        choice = [[Class.BX1], 1.5, 'a', 'nest'];
+                        choice = [[Class.BX1], 1.3, 'a', 'nest'];
                         sockets.broadcast('The ground vigorously shakes...');
                         break;
+                    
                     case 1: 
                         choice = [[Class.taurus], 1, 'castle', 'norm']; 
-                        sockets.broadcast('The earth trembles, theyre here...');
+                        sockets.broadcast('The earth trembles, its here...');
                         break;
                     case 2: 
-                        choice = [[Class.CK2], 1, 'castle', 'norm']; 
+                        choice = [[Class.CK2], 0.8, 'castle', 'norm']; 
                         sockets.broadcast('A strange yet familiar trembling...');
                         break;
                     case 3: 
@@ -4663,6 +4665,10 @@ var maintainloop = (() => {
                     case 9: 
                         choice = [[Class.CK8], 0.5, 'castle', 'nest']; 
                         sockets.broadcast('There is no chance to beat whats coming...');
+                        break;
+                    case 10: 
+                        choice = [[Class.BX2], 0.7, 'a', 'nest'];
+                        sockets.broadcast('The ship starts to emerge');
                         break;
                 }
                 boss.prepareToSpawn(...choice);
@@ -4708,6 +4714,13 @@ let o = new Entity(loc);
 o.define(Class.devSPIN);
 o.team = -99
 o.color = 37  
+}; 
+      if (room.domg)
+  for (let loc of room.domg) {
+let o = new Entity(loc);
+o.define(Class.dominatorgunner);
+o.team = -99
+o.color = 3  
 }; 
        if (room.boom)
   for (let loc of room.boom) {
