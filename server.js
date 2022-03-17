@@ -80,6 +80,7 @@ const room = {
     room.findType('domm');
     room.findType('anti');
     room.findType('doom');
+    room.findType('domrg');
     room.findType('domg');
     room.findType('boom');
     room.nestFoodAmount = 1.5 * Math.sqrt(room.nest.length) / room.xgrid / room.ygrid;
@@ -4714,6 +4715,13 @@ let o = new Entity(loc);
 o.define(Class.devSPIN);
 o.team = -99
 o.color = 37  
+}; 
+      if (room.domrg)
+  for (let loc of room.domrg) {
+let o = new Entity(loc);
+o.define(Class.dominatorrogue);
+o.team = -99
+o.color = 7  
 }; 
       if (room.domg)
   for (let loc of room.domg) {
