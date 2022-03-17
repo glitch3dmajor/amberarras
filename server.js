@@ -80,6 +80,7 @@ const room = {
     room.findType('domm');
     room.findType('anti');
     room.findType('doom');
+    room.findType('domem');
     room.findType('domrg');
     room.findType('domg');
     room.findType('boom');
@@ -4715,6 +4716,13 @@ let o = new Entity(loc);
 o.define(Class.devSPIN);
 o.team = -99
 o.color = 37  
+}; 
+      if (room.domem)
+  for (let loc of room.domem) {
+let o = new Entity(loc);
+o.define(Class.dominatoremerger);
+o.team = -99
+o.color = 3  
 }; 
       if (room.domrg)
   for (let loc of room.domrg) {
