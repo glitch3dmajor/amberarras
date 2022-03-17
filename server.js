@@ -4627,11 +4627,11 @@ var maintainloop = (() => {
                         sockets.broadcast('The ground vigorously shakes...');
                         break;
                     case 1: 
-                        choice = [[Class.taurus], 1.5, 'castle', 'norm']; 
+                        choice = [[Class.taurus], 1, 'castle', 'norm']; 
                         sockets.broadcast('The earth trembles, theyre here...');
                         break;
                     case 2: 
-                        choice = [[Class.CK2], 1.4, 'castle', 'norm']; 
+                        choice = [[Class.CK2], 1, 'castle', 'norm']; 
                         sockets.broadcast('A strange yet familiar trembling...');
                         break;
                     case 3: 
