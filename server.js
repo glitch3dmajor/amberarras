@@ -4662,14 +4662,6 @@ var maintainloop = (() => {
                         choice = [[Class.CK8], 0.5, 'castle', 'nest']; 
                         sockets.broadcast('There is no chance to beat whats coming...');
                         break;
-                    case 10: 
-                        choice = [[Class.aries], 1.5, 'castle', 'nest']; 
-                        sockets.broadcast('The stars seem to allign...');
-                        break;
-                    case 11: 
-                        choice = [[Class.knockout], 0.5, 'castle', 'nest']; 
-                        sockets.broadcast('A maniacal laughter emerges');
-                        break;
                 }
                 boss.prepareToSpawn(...choice);
                 setTimeout(boss.spawn, 3000);
