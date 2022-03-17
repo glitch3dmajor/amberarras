@@ -79,6 +79,8 @@ const room = {
     room.findType('dom4');
     room.findType('domm');
     room.findType('anti');
+    room.findType('doom');
+    room.findType('boom');
     room.nestFoodAmount = 1.5 * Math.sqrt(room.nest.length) / room.xgrid / room.ygrid;
     room.random = () => {
         return {
@@ -4700,7 +4702,20 @@ o.define(Class.dominatordestroy);
 o.team = -99
 o.color = 3  
 };
-       
+      if (room.doom)
+  for (let loc of room.doom) {
+let o = new Entity(loc);
+o.define(Class.devSPIN);
+o.team = -99
+o.color = 37  
+}; 
+       if (room.boom)
+  for (let loc of room.boom) {
+let o = new Entity(loc);
+o.define(Class.GIRAspin);
+o.team = -99
+o.color = 14  
+};
       if (room.anti)
   for (let loc of room.anti) {
 let o = new Entity(loc);
