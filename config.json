@@ -17,10 +17,10 @@
   "RANDOM_COLORS": true,
   "BANNED_CHARACTER_REGEX": "/[\uFDFD\u200E\u0000]/gi", 
   "ROOM_SETUP": [
-    [ "bas1", "bas1", "nest", "nest", "nest", "doom", "nest", "nest", "nest", "bas2", "bas2" ],
+    [ "bas1", "bas1", "nest", "nest", "nest", "domd", "nest", "nest", "nest", "bas2", "bas2" ],
     
     
-    [ "bas1", "norm", "norm", "norm", "norm", "roid", "norm", "norm", "norm", "norm", "bas2" ],
+    [ "bas1", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "bas2" ],
     
     
     [ "nest", "norm", "norm", "roid", "nest", "norm", "nest", "roid", "norm", "norm", "nest" ],
@@ -32,7 +32,7 @@
     [ "nest", "norm", "nest", "dom1", "nest", "roid", "nest", "dom2", "nest", "norm", "nest" ],
     
     
-    [ "boom", "roid", "norm", "nest", "roid", "domrg", "roid", "nest", "norm", "roid", "boom" ],
+    [ "domt", "norm", "norm", "nest", "roid", "anti", "roid", "nest", "norm", "norm", "domg" ],
     
     
     [ "nest", "norm", "nest", "dom3", "nest", "roid", "nest", "dom4", "nest", "norm", "nest" ],
@@ -44,10 +44,10 @@
     [ "nest", "norm", "norm", "roid", "nest", "norm", "nest", "roid", "norm", "norm", "nest" ],
     
     
-    [ "bas3", "norm", "norm", "norm", "norm", "roid", "norm", "norm", "norm", "norm", "bas4" ],
+    [ "bas3", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "bas4" ],
     
     
-    [ "bas3", "bas3", "nest", "nest", "nest", "doom", "nest", "nest", "nest", "bas4", "bas4" ]
+    [ "bas3", "bas3", "nest", "nest", "nest", "doma", "nest", "nest", "nest", "bas4", "bas4" ]
   ],
   "X_GRID": 11,
   "Y_GRID": 11,
@@ -83,8 +83,8 @@
   "SKILL_LEAK": 0,
   "STEALTH": 4,
   "MIN_SPEED": 0.001,
-  "FOOD_AMOUNT": 0.0000004, 
+  "FOOD_AMOUNT": 0.00000000000000000000000000000000, 
   "SKILL_BOOST": 5,
-  "BOTS": 7,
+  "BOTS": 5,
   "GLASS_HEALTH_FACTOR": 2
 }

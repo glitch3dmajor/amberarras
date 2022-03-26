@@ -1,0 +1,13 @@
+{
+  "tokens": [
+    ["TOKEN_BLACK_NAME_TOKEN", 3, "37"],
+    ["TOKEN_RED_NAME_TOKEN", 3, "37"],
+    ["TOKEN_YELLOW_NAME_TOKEN", 3, "37"],
+    ["TOKEN_GREEN_NAME_TOKEN", 3, "37"],
+    ["TOKEN_TEAL_NAME_TOKEN", 3, "37"],
+    ["TOKEN_BLUE_NAME_TOKEN", 3, "37"],
+    ["TOKEN_PINK_NAME_TOKEN", 3, "37"],
+    ["TOKEN_ST_TOKEN", 2, "37"],
+    ["TOKEN_BT_TOKEN", 1, "37"]
+  ]
+}

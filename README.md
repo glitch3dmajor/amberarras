@@ -4,7 +4,7 @@
 
 1. Click the top right where it says **Remix to Edit :microphone:**
 2. Give your new project a name.
-3. Your private server name will be at <http://arras.io/#host=arras-template.glitch.me> (replace `arras-template` with it's new name)
+3. Your private server name will be at <http://arras.io/#host=arras-amberarras.glitch.me> (replace `arras-template` with it's new name)
 4. You add a gamemode code in the link to specify its gamemode (see below).
 
 ## More Information
