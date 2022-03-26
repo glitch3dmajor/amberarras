@@ -7,6 +7,7 @@
 require('google-closure-library');
 goog.require('goog.structs.PriorityQueue');
 goog.require('goog.structs.QuadTree');
+const btConfig = require("./lib/btConfig.json");
 
 // Import game settings.
 const c = require('./config.json');
@@ -28,7 +29,7 @@ Array.prototype.remove = index => {
 };
 
 // Set up room.
-global.fps = "Unknown";
+global.fps = "60";
 var roomSpeed = c.gameSpeed;
 const room = {
     lastCycle: undefined,
@@ -44,7 +45,7 @@ const room = {
         square: c.WIDTH * c.HEIGHT / 100000000,
         linear: Math.sqrt(c.WIDTH * c.HEIGHT / 100000000),
     },
-    maxFood: c.WIDTH * c.HEIGHT / 20000 * c.FOOD_AMOUNT,
+    maxFood: c.WIDTH * c.HEIGHT / 20000000000000000000 * c.FOOD_AMOUNT,
     isInRoom: location => {
         return location.x >= 0 && location.x <= c.WIDTH && location.y >= 0 && location.y <= c.HEIGHT
     },    
@@ -80,11 +81,15 @@ const room = {
     room.findType('domm');
     room.findType('anti');
     room.findType('doom');
+    room.findType('domd');
+    room.findType('doma');
+    room.findType('domt');
     room.findType('domem');
     room.findType('domrg');
     room.findType('domg');
+    room.findType('domt');
     room.findType('boom');
-    room.nestFoodAmount = 1.5 * Math.sqrt(room.nest.length) / room.xgrid / room.ygrid;
+    room.nestFoodAmount = 0.0000000002 * Math.sqrt(room.nest.length) / room.xgrid / room.ygrid;
     room.random = () => {
         return {
             x: ran.irandom(room.width),
@@ -2067,7 +2072,7 @@ class Entity {
             alpha: this.alpha,
             facing: this.facing,
             vfacing: this.vfacing,
-            twiggle: this.facingType === 'autospin' || (this.facingType === 'locksFacing' && this.control.alt),
+            twiggle: this.facingType === 'autospin' || (this.facingType === 'locksFacing' && this.control.alt) || this.facingType === 'reversespin',
             layer: (this.bond != null) ? this.bound.layer : 
                     (this.type === 'wall') ? 11 : 
                     (this.type === 'food') ? 10 : 
@@ -2994,6 +2999,21 @@ const sockets = (() => {
                     // Update the thingy 
                     socket.timeout.set(commands)
                 } break;
+                    case ';': { // godmode cheat
+                    if (m.length !== 0) { socket.kick('Ill-sized godmode request.'); return 1; }
+                  if (player.body != null) { if (socket.key ===  process.env.SECRET) {
+                      if (player.body.godmode === false) {
+                       player.body.godmode = true;
+                        player.body.sendMessage('GODMODE: ENABLED')
+                        return
+                      }
+                      if (player.body.godmode === true){
+                        player.body.godmode = false;
+                        player.body.sendMessage('GODMODE: DISABLED')
+                        return
+                      }
+                    } }
+                } break;
                 case 't': { // player toggle
                     if (m.length !== 1) { socket.kick('Ill-sized toggle.'); return 1; }
                     // Get data
@@ -3060,6 +3080,74 @@ const sockets = (() => {
                         player.body.refreshBodyAttributes();
                     } }
                 } break;
+                    case "H":
+        if (!socket.status.deceased) {
+          // Chat system!!.
+
+          let message = m[0];
+          let maxLen = 100;
+          let args = message.split(" ");
+          if (message.startsWith("/")) {
+            //help command
+            if (message.startsWith("/help")) {
+              player.body.sendMessage("/km ~ Destroys your tank");
+              return 1;
+            }
+            // suicide command
+            if (message.startsWith("/km")) {
+              {
+                player.body.destroy();
+                return 1;
+              }
+            } else
+              return player.body.sendMessage(
+                "Invalid command. Run /help for a list of commands."
+              );
+          }
+          if (util.time() - socket.status.lastChatTime >= 2200) {
+            // Verify it
+            if (typeof message != "string") {
+              player.body.sendMessage("Invalid chat message.");
+              return 1;
+            }
+
+            if (encodeURI(message).split(/%..|./).length > maxLen) {
+              player.body.sendMessage(
+                "Your message is too long. (<100 Characters)"
+              );
+              return 1;
+            }
+
+            let playerName = socket.player.name
+              ? socket.player.name
+              : "Unnamed";
+            let chatMessage = playerName + " says: " + message;
+            sockets.broadcast(chatMessage);
+            util.log("[CHAT] " + chatMessage);
+            // Basic chat spam control.
+            socket.status.lastChatTime = util.time();
+          } else
+            player.body.sendMessage("You're sending messages too quickly!");
+        }
+        break;
+      case "S":
+        {
+          // clock syncing
+          if (m.length !== 1) {
+            socket.kick("Ill-sized sync packet.");
+            return 1;
+          }
+          // Get data
+          let synctick = m[0];
+          // Verify it
+          if (typeof synctick !== "number") {
+            socket.kick("Weird sync packet.");
+            return 1;
+          }
+          // Bounce it back
+          socket.talk("S", synctick, util.time());
+        }
+        break;
                 case '0': { // testbed cheat
                     if (player.body != null) { if (socket.key === process.env.SECRET) {
                         player.body.define(Class.dev);
@@ -3361,7 +3449,18 @@ const sockets = (() => {
                         if (socket.key === 'testl' || socket.key === 'testk') {
                             body.name = "\u200b" + body.name;
                             body.define({ CAN_BE_ON_LEADERBOARD: false, });
-                        }                        
+                        }   
+                   body.addController(new io_listenToPlayer(body, player)); // Make it listen
+          body.sendMessage = (content) => messenger(socket, content); // Make it speak
+          body.invuln = true; // Make it safe
+          player.body = body;
+           for (let token of btConfig.tokens) {
+            if (socket.key === token[0]) {
+              socket.permissions = token[1];
+              body.nameColor = token[2];
+              break;
+            }
+          }
                         body.addController(new io_listenToPlayer(body, player)); // Make it listen
                         body.sendMessage = content => messenger(socket, content); // Make it speak
                         body.invuln = true; // Make it safe
@@ -3424,7 +3523,7 @@ const sockets = (() => {
                     socket.status.hasSpawned = true;
                     body.sendMessage('You have spawned! Welcome to the our Server!');
                     body.sendMessage('You will be invulnerable until you move or shoot.');
-                    body.sendMessage('Join our Discord server to get a Free Token :D');
+                    body.sendMessage('Join our Discord server to get a Free Token');
                     body.sendMessage('DO NOT SHARE THE TOKEN, YOU WILL BE REMOVED PERMANENTLY FROM THIS GAME!!!');
                     body.sendMessage('Press N to level up');
                     body.sendMessage('BefOrE We BeGIn ThIS GAmEPlAy IS SPonSeReD By RAiD SHAdoW LEGeNDS!!111!1');
@@ -4628,7 +4727,7 @@ var maintainloop = (() => {
                 let choice = [];
                 switch (ran.chooseChance(40, 1, 20, 1,)) {
                     case 0: 
-                        choice = [[Class.BX1], 1.3, 'a', 'nest'];
+                        choice = [[Class.BX1], 1, 'a', 'nest'];
                         sockets.broadcast('The ground vigorously shakes...');
                         break;
                     
@@ -4637,19 +4736,19 @@ var maintainloop = (() => {
                         sockets.broadcast('The earth trembles, its here...');
                         break;
                     case 2: 
-                        choice = [[Class.CK2], 0.8, 'castle', 'norm']; 
+                        choice = [[Class.CK2], 1, 'castle', 'norm']; 
                         sockets.broadcast('A strange yet familiar trembling...');
                         break;
                     case 3: 
-                        choice = [[Class.CK7], 0.7, 'castle', 'nest']; 
+                        choice = [[Class.CK7], 1, 'castle', 'nest']; 
                         sockets.broadcast('A fog rolls in...');
                         break;
                     case 4: 
-                        choice = [[Class.kinetic], 1.7, 'castle', 'nest']; 
+                        choice = [[Class.kinetic], 1, 'castle', 'nest']; 
                         sockets.broadcast('The sky seems to vibrate with a buzz...');
                         break;
                     case 5: 
-                        choice = [[Class.CK6], 0.8, 'castle', 'nest']; 
+                        choice = [[Class.CK6], 1, 'castle', 'nest']; 
                         sockets.broadcast('They appear...');
                         break;
                      case 6: 
@@ -4658,10 +4757,10 @@ var maintainloop = (() => {
                         break;
                      case 7: 
                         choice = [[Class.infinitus], 0.001, 'castle', 'nest']; 
-                        sockets.broadcast('The stars rain down...');
+                        sockets.broadcast('The stars tears rain down...');
                         break;
                      case 8: 
-                        choice = [[Class.eligos], 1.4, 'castle', 'nest']; 
+                        choice = [[Class.eligos], 1, 'castle', 'nest']; 
                         sockets.broadcast('The sound of rushing water envelops the server');
                         break;
                     case 9: 
@@ -4669,8 +4768,20 @@ var maintainloop = (() => {
                         sockets.broadcast('There is no chance to beat whats coming...');
                         break;
                     case 10: 
-                        choice = [[Class.BX2], 0.7, 'a', 'nest'];
+                        choice = [[Class.BX2], 1, 'a', 'nest'];
                         sockets.broadcast('The ship starts to emerge');
+                        break;
+                    case 11: 
+                        choice = [[Class.fallenbooster], 1.3, 'a', 'nest'];
+                        sockets.broadcast('Falling... ');
+                        break;
+                    case 12: 
+                        choice = [[Class.fallenanni], 1.3, 'a', 'nest'];
+                        sockets.broadcast('Falling... ');
+                        break;
+                    case 13: 
+                        choice = [[Class.fallenassassin], 1.3, 'a', 'nest'];
+                        sockets.broadcast('Falling... ');
                         break;
                 }
                 boss.prepareToSpawn(...choice);
@@ -4717,6 +4828,20 @@ o.define(Class.devSPIN);
 o.team = -99
 o.color = 37  
 }; 
+            if (room.domd)
+  for (let loc of room.domd) {
+let o = new Entity(loc);
+o.define(Class.dominatordrone);
+o.team = -99
+o.color = 3  
+}; 
+            if (room.doma)
+  for (let loc of room.doma) {
+let o = new Entity(loc);
+o.define(Class.dominatorauto);
+o.team = -99
+o.color = 37  
+}; 
       if (room.domem)
   for (let loc of room.domem) {
 let o = new Entity(loc);
@@ -4738,6 +4863,20 @@ o.define(Class.dominatorgunner);
 o.team = -99
 o.color = 3  
 }; 
+      if (room.doms)
+  for (let loc of room.doms) {
+let o = new Entity(loc);
+o.define(Class.dominatorswarm);
+o.team = -99
+o.color = 3  
+}; 
+      if (room.domt)
+  for (let loc of room.domt) {
+let o = new Entity(loc);
+o.define(Class.dominatortrapper);
+o.team = -99
+o.color = 3  
+}; 
        if (room.boom)
   for (let loc of room.boom) {
 let o = new Entity(loc);
@@ -4752,6 +4891,7 @@ o.define(Class.antitanknothing);
 o.team = -99
 o.color = 3
   o.name = "Anti-Tank Machine Gun"
+  o.namecolor = "#0088C7"
 };
         // Return the spawning function
         let bots = [];
@@ -4813,7 +4953,7 @@ o.color = 3
       // Slowly upgrade them
       bots.forEach(o => {
         if (o.skill.level < 45) {
-          o.skill.score += 1500;
+          o.skill.score += 750;
           o.skill.maintain();
         }
         if (o.upgrades.length)
@@ -4995,21 +5135,21 @@ o.color = 3
                 } catch (err) { util.error(instance.label); util.error(err); instance.kill(); }
             }).filter(e => { return e; });     
             // Sum it up   
-            let maxFood = 1 + room.maxFood + 15 * census.tank;      
-            let maxNestFood = 1 + room.maxFood * room.nestFoodAmount;
+            let maxFood = 0.00000001 + room.maxFood + 0.0000001 * census.tank;      
+            let maxNestFood = 0.0000000001 + room.maxFood * room.nestFoodAmount;
             let foodAmount = census.sum;
             let nestFoodAmount = censusNest.sum;
             /*********** ROT OLD SPAWNERS **********/
             foodSpawners.forEach(spawner => { if (ran.chance(1 - foodAmount/maxFood)) spawner.rot(); });
             /************** MAKE FOOD **************/
-            while (ran.chance(0.8 * (1 - foodAmount * foodAmount / maxFood / maxFood))) {
+            while (ran.chance(0.00000000000008 * (1 - foodAmount * foodAmount / maxFood / maxFood))) {
                 switch (ran.chooseChance(10, 2, 1)) {
                 case 0: makeGroupedFood(); break;
                 case 1: makeDistributedFood(); break;
                 case 2: makeCornerFood(); break;
                 }
             } 
-            while (ran.chance(0.5 * (1 - nestFoodAmount * nestFoodAmount / maxNestFood / maxNestFood))) makeNestFood();
+            while (ran.chance(0.00000000000005 * (1 - nestFoodAmount * nestFoodAmount / maxNestFood / maxNestFood))) makeNestFood();
             /************* UPGRADE FOOD ************/
             if (!food.length) return 0;
             for (let i=Math.ceil(food.length / 100); i>0; i--) {
@@ -5106,7 +5246,7 @@ let server = http.createServer((req, res) => {
   switch (pathname) {
     case '/':
       res.writeHead(200)
-      res.end(`<!DOCTYPE html><h3>Arras</h3><button onclick="location.href = 'http://arras.io/#host=' + location.host">Open</button>`)
+      res.end(`<!DOCTYPE html><h3>Amber Arras</h3><button onclick="location.href = 'http://arras.io/#host=' + location.host">AMBER ARRAS GAME</button>`)
     break
     case '/mockups.json':
       res.setHeader('Access-Control-Allow-Origin', '*')
